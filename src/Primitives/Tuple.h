@@ -36,6 +36,8 @@ namespace Primitives {
 
         void operator/=(const float&);
 
+        double magnitude();
+
     private:
         Type _type;
 

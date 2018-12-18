@@ -4,6 +4,7 @@
 #if 1
 
 #include "catch.hpp"
+#include <cmath>
 #include "../src/Primitives/Tuple.h"
 
 
@@ -99,12 +100,35 @@ TEST_CASE("Dividing by scalar")
     REQUIRE(b / 2.0f == a);
 
 }
+
 TEST_CASE("In place scalar divide")
 {
     Primitives::Tuple a(1.0f, 2.0f, 3.0f, 1.0f);
     Primitives::Tuple b(2.0f, 4.0f, 6.0f, 2.0f);
     b /= 2.0f;
     REQUIRE(b == a);
+}
+
+TEST_CASE("Magnitude Calculation")
+{
+    SECTION("1 component magnitude")
+    {
+        Primitives::Tuple v = Primitives::vector(1.0f, 0.0f, 0.0f);
+        REQUIRE(v.magnitude() == 1.0f);
+    }
+
+    SECTION("Multi component magnitude")
+    {
+         Primitives::Tuple v = Primitives::vector(1.0f, 2.0f, 3.0f);
+         REQUIRE(abs(.01 * v.magnitude() > v.magnitude() - sqrt(14.0f)));
+    }
+
+    SECTION("Negative components")
+    {
+        Primitives::Tuple v = Primitives::vector(-1.0f, -2.0f, -3.0f);
+        REQUIRE(abs(.01 * v.magnitude() > v.magnitude() - sqrt(14.0f)));
+    }
+
 }
 #endif
 

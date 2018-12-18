@@ -74,6 +74,15 @@ Primitives::Tuple Primitives::Tuple::operator/(const float &scalar) {
     return tup;
 }
 
+double Primitives::Tuple::magnitude() {
+    double sum = pow(this -> x, 2.0) +
+                pow(this -> y, 2.0) +
+                pow(this -> z, 2.0) +
+                pow(this -> w, 2.0);
+    return sqrt(sum);
+
+}
+
 Primitives::Tuple Primitives::vector(float x, float y, float z) {
     return Primitives::Tuple(x, y, z, 0.0f);
 }
