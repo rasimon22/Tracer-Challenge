@@ -38,16 +38,26 @@ namespace Primitives {
 
         double magnitude();
 
+        Tuple normalize();
+
     private:
         Type _type;
 
     };
 
+    //Functions in the Primitives namespace
     Tuple point(float, float, float);
+
     Tuple point(const Tuple&);
+
     Tuple vector(float, float, float);
+
     Tuple vector(const Tuple&);
+
     bool float_equal(float, float);
+
     std::ostream& operator << (std::ostream &os, const Primitives::Tuple&);
+
+    float dot_product(const Primitives::Tuple&, const Primitives::Tuple&);
 }
 #endif //TRACER_CHALLENGE_TUPLE_H

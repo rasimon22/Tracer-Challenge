@@ -83,6 +83,13 @@ double Primitives::Tuple::magnitude() {
 
 }
 
+Primitives::Tuple Primitives::Tuple::normalize() {
+    float mag = this -> magnitude();
+    return Primitives::vector(this -> x / mag,
+            this -> y / mag,
+            this -> z / mag);
+}
+
 Primitives::Tuple Primitives::vector(float x, float y, float z) {
     return Primitives::Tuple(x, y, z, 0.0f);
 }
@@ -108,5 +115,12 @@ bool Primitives::float_equal(float a, float b) {
 std::ostream& Primitives::operator<<(std::ostream &os, const Primitives::Tuple &rhs) {
     os << '(' << rhs.x << ", " << rhs.y << ", " << rhs.z << ", " << rhs.w << ')';
     return os;
+}
+
+float Primitives::dot_product(const Primitives::Tuple &a, const Primitives::Tuple &b) {
+    return a.x * b.x +
+        a.y * b.y +
+        a.z * b.z +
+        a.w * b.w;
 }
 

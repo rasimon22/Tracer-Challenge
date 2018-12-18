@@ -130,5 +130,29 @@ TEST_CASE("Magnitude Calculation")
     }
 
 }
+
+TEST_CASE("Normalizing Vectors")
+{
+    SECTION("Single component normalize")
+    {
+        Primitives::Tuple v = Primitives::vector(4.0f, 0.0f, 0.0f);
+        REQUIRE(v.normalize() == Primitives::vector(1.0f,0.0f,0.0f));
+        REQUIRE(v.normalize().magnitude() == 1.0f);
+    }
+
+    SECTION("Multi component normalize")
+    {
+        Primitives::Tuple v = Primitives::vector(1.0f, 2.0f, 3.0f);
+        REQUIRE(v.normalize() == Primitives::vector(1.0/sqrt(14),2.0/sqrt(14), 3.0/sqrt(14)));
+        REQUIRE(abs(v.normalize().magnitude() - 1.0f) < 0.001);
+    }
+}
+
+TEST_CASE("Dot Product")
+{
+    Primitives::Tuple a = Primitives::vector(1.0f, 2.0f, 3.0f);
+    Primitives::Tuple b = Primitives::vector(2.0f, 3.0f, 4.0f);
+    REQUIRE(Primitives::dot_product(a, b) == 20.0f);
+}
 #endif
 
