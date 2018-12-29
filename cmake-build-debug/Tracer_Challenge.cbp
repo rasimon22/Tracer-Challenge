@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/Test/CanvasTest.cpp">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/Test/TupleTest.cpp">
 			<Option target="Tracer_Challenge"/>
 		</Unit>
@@ -89,10 +92,31 @@
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/main.cpp">
 			<Option target="Tracer_Challenge"/>
 		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Canvas">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Canvas/Color.cpp">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Canvas/Color.h">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.cpp">
 			<Option target="Tracer_Challenge"/>
 		</Unit>
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.h">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Simulation/Environment.cpp">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Simulation/Environment.h">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Simulation/Projectile.cpp">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Simulation/Projectile.h">
 			<Option target="Tracer_Challenge"/>
 		</Unit>
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/CMakeLists.txt">

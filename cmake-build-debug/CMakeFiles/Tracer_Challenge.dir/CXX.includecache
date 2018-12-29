@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.cpp
-Tuple.h
+/Users/rasimon/Documents/Tracer_Challenge/src/Canvas/Color.cpp
+Color.h
+/Users/rasimon/Documents/Tracer_Challenge/src/Canvas/Color.h
+
+/Users/rasimon/Documents/Tracer_Challenge/src/Canvas/Color.h
+../Primitives/Tuple.h
 /Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.h
-cmath
--
-iostream
--
 
 /Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.h
 iostream

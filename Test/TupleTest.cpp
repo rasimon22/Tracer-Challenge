@@ -154,5 +154,14 @@ TEST_CASE("Dot Product")
     Primitives::Tuple b = Primitives::vector(2.0f, 3.0f, 4.0f);
     REQUIRE(Primitives::dot_product(a, b) == 20.0f);
 }
+
+TEST_CASE("Cross Product")
+{
+    Primitives::Tuple a = Primitives::vector(1.0f, 2.0f, 3.0f);
+    Primitives::Tuple b = Primitives::vector(2.0f, 3.0f, 4.0f);
+
+    REQUIRE(Primitives::cross_product(a,b) == Primitives::vector(-1.0f, 2.0f, -1.0f));
+    REQUIRE(Primitives::cross_product(b,a) == Primitives::vector(1.0f, -2.0f, 1.0f));
+}
 #endif
 

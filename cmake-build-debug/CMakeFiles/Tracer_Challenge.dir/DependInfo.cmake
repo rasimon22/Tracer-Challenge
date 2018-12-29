@@ -4,9 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/rasimon/Documents/Tracer_Challenge/Test/CanvasTest.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o"
   "/Users/rasimon/Documents/Tracer_Challenge/Test/TupleTest.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o"
   "/Users/rasimon/Documents/Tracer_Challenge/main.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/main.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/src/Canvas/Color.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.o"
   "/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/src/Simulation/Environment.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Simulation/Environment.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/src/Simulation/Projectile.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Simulation/Projectile.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

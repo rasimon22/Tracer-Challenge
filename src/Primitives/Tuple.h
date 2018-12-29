@@ -11,12 +11,16 @@ namespace Primitives {
     public:
         float x, y, z, w;
 
+        Tuple();
         Tuple(float, float, float, float);
 
         enum Type {
             Point,
             Vector
         };
+
+        void set(float, float, float, float);
+
         Type type();
 
         bool operator==(const Primitives::Tuple&) const;
@@ -59,5 +63,7 @@ namespace Primitives {
     std::ostream& operator << (std::ostream &os, const Primitives::Tuple&);
 
     float dot_product(const Primitives::Tuple&, const Primitives::Tuple&);
+
+    Tuple cross_product(const Primitives::Tuple&, const Primitives::Tuple&);
 }
 #endif //TRACER_CHALLENGE_TUPLE_H

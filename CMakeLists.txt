@@ -3,10 +3,16 @@ project(Tracer_Challenge)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(TEST Test/catch.hpp Test/TupleTest.cpp)
+set(TEST Test/catch.hpp Test/TupleTest.cpp Test/CanvasTest.cpp)
 
 set(PRIMITIVES src/Primitives/Tuple.h src/Primitives/Tuple.cpp)
 
-set(SOURCE main.cpp ${TEST} ${PRIMITIVES})
+set(SIMULATION src/Simulation/Environment.h src/Simulation/Environment.cpp src/Simulation/Projectile.h
+        src/Simulation/Projectile.cpp)
+
+set(CANVAS src/Canvas src/Canvas/Color.cpp src/Canvas/Color.h)
+
+set(SOURCE main.cpp ${TEST} ${PRIMITIVES} ${SIMULATION} ${CANVAS})
+
 
 add_executable(Tracer_Challenge ${SOURCE})

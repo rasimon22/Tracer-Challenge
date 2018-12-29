@@ -90,6 +90,21 @@ Primitives::Tuple Primitives::Tuple::normalize() {
             this -> z / mag);
 }
 
+Primitives::Tuple::Tuple(){
+    this -> x = 0.0f;
+    this -> y = 0.0f;
+    this -> z = 0.0f;
+    this -> w = 0.0f;
+    this -> _type = Primitives::Tuple::Point;
+}
+
+void Primitives::Tuple::set(float _x, float _y, float _z, float _w) {
+    this -> x = _x;
+    this -> y = _y;
+    this -> z = _z;
+    this -> w = _w;
+}
+
 Primitives::Tuple Primitives::vector(float x, float y, float z) {
     return Primitives::Tuple(x, y, z, 0.0f);
 }
@@ -122,5 +137,11 @@ float Primitives::dot_product(const Primitives::Tuple &a, const Primitives::Tupl
         a.y * b.y +
         a.z * b.z +
         a.w * b.w;
+}
+
+Primitives::Tuple Primitives::cross_product(const Primitives::Tuple &a, const Primitives::Tuple &b) {
+    return Primitives::vector(a.y * b.z - a.z * b.y,
+                              a.z * b.x - a.x * b.z,
+                              a.x * b.y - a.y * b.x);
 }
 

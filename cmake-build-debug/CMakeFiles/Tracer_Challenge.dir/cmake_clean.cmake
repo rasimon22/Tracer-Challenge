@@ -1,7 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Tracer_Challenge.dir/main.cpp.o"
   "CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o"
+  "CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o"
   "CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o"
+  "CMakeFiles/Tracer_Challenge.dir/src/Simulation/Environment.cpp.o"
+  "CMakeFiles/Tracer_Challenge.dir/src/Simulation/Projectile.cpp.o"
+  "CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.o"
   "Tracer_Challenge.pdb"
   "Tracer_Challenge"
 )
