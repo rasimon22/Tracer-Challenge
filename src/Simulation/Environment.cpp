@@ -7,29 +7,29 @@
 
 
 Primitives::Tuple Simulation::Environment::getGravity(){
-   return this -> gravity;
+   return gravity;
 }
 
 Primitives::Tuple Simulation::Environment::getWind() {
-   return this -> wind;
+   return wind;
 }
 
 void Simulation::Environment::setGravity(const Primitives::Tuple &grav) {
-   this -> gravity = grav;
+   gravity = grav;
 }
 
 void Simulation::Environment::setWind(const Primitives::Tuple &wind) {
-   this -> wind = wind;
+   wind = wind;
 }
 
 Simulation::Environment::Environment() {
-   this -> gravity = Primitives::vector(0.0, 0.0, 0.0);
-   this -> wind = Primitives::vector(0.0, 0.0, 0.0);
+   gravity = Primitives::vector(0.0, 0.0, 0.0);
+   wind = Primitives::vector(0.0, 0.0, 0.0);
 }
 
 Simulation::Environment::Environment(Primitives::Tuple g, Primitives::Tuple w) {
-   this -> gravity = g;
-   this -> wind = w;
+   gravity = g;
+   wind = w;
 
 }
 
