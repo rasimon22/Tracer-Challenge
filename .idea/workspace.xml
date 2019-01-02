@@ -11,13 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12ded6ad-993c-4bd1-8c0c-ed9e6fcbd87e" name="Default Changelist" comment="Added canvas and color functionality, canvas renders to ppm">
-      <change afterPath="$PROJECT_DIR$/src/Render/Canvas.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Render/Canvas.h" afterDir="false" />
+    <list default="true" id="12ded6ad-993c-4bd1-8c0c-ed9e6fcbd87e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/CanvasTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/CanvasTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TupleTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TupleTest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/DependInfo.cmake" afterDir="false" />
@@ -33,12 +28,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Tracer_Challenge" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Tracer_Challenge" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Tracer_Challenge.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Tracer_Challenge.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Canvas/Color.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Render/Color.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Canvas/Color.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Render/Color.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Primitives/Tuple.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primitives/Tuple.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Primitives/Tuple.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primitives/Tuple.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulation/Environment.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation/Environment.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,17 +100,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Primitives/Tuple.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            <state relative-caret-position="420">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Primitives/Tuple.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="142" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="169">
+              <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
               <folding>
                 <element signature="e#47#65#0" expanded="true" />
               </folding>
@@ -138,11 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Render/Color.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+            <state relative-caret-position="482">
+              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -178,8 +167,6 @@
         <option value="$PROJECT_DIR$/src/Canvas/Color.h" />
         <option value="$PROJECT_DIR$/src/Canvas/Color.cpp" />
         <option value="$PROJECT_DIR$/src/Simulation/Environment.cpp" />
-        <option value="$PROJECT_DIR$/src/Primitives/Tuple.h" />
-        <option value="$PROJECT_DIR$/src/Primitives/Tuple.cpp" />
         <option value="$PROJECT_DIR$/src/Render/Canvas.h" />
         <option value="$PROJECT_DIR$/src/Render/Canvas.cpp" />
         <option value="$PROJECT_DIR$/Test/TupleTest.cpp" />
@@ -187,6 +174,8 @@
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/src/Render/Color.h" />
         <option value="$PROJECT_DIR$/src/Render/Color.cpp" />
+        <option value="$PROJECT_DIR$/src/Primitives/Tuple.h" />
+        <option value="$PROJECT_DIR$/src/Primitives/Tuple.cpp" />
       </list>
     </option>
   </component>
@@ -281,7 +270,7 @@
       <workItem from="1545254929768" duration="10000" />
       <workItem from="1545254980277" duration="4032000" />
       <workItem from="1545997734229" duration="11700000" />
-      <workItem from="1546395372189" duration="4305000" />
+      <workItem from="1546395372189" duration="4474000" />
     </task>
     <task id="LOCAL-00001" summary="Added tuple magnitude calculation">
       <created>1545126574798</created>
@@ -304,11 +293,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546076571726</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added canvas and color functionality, canvas renders to ppm">
+      <created>1546402063001</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1546402063002</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34770000" />
+    <option name="totallyTimeSpent" value="34939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -324,7 +320,7 @@
       <window_info anchor="bottom" id="Messages" order="4" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.3987952" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="CMake" order="10" weight="0.32891566" />
@@ -416,23 +412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primitives/Tuple.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primitives/Tuple.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
-          <folding>
-            <element signature="e#47#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/TupleTest.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -493,8 +472,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Render/Color.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        <state relative-caret-position="482">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primitives/Tuple.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primitives/Tuple.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
+          <folding>
+            <element signature="e#47#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
