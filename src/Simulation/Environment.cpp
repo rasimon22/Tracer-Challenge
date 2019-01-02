@@ -34,6 +34,7 @@ Simulation::Environment::Environment(Primitives::Tuple g, Primitives::Tuple w) {
 }
 
 Simulation::Projectile Simulation::tick(Simulation::Environment &env, Simulation::Projectile &proj) {
+   //TODO:Refactor out unnecessary copies
    Primitives::Tuple position = proj.getPosition() + proj.getMomentum();
    Primitives::Tuple velocity = proj.getMomentum() + env.getWind() + env.getGravity();
    return Simulation::Projectile(position, velocity);

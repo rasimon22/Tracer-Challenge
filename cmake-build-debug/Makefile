@@ -204,33 +204,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/Canvas/Color.o: src/Canvas/Color.cpp.o
-
-.PHONY : src/Canvas/Color.o
-
-# target to build an object file
-src/Canvas/Color.cpp.o:
-	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.o
-.PHONY : src/Canvas/Color.cpp.o
-
-src/Canvas/Color.i: src/Canvas/Color.cpp.i
-
-.PHONY : src/Canvas/Color.i
-
-# target to preprocess a source file
-src/Canvas/Color.cpp.i:
-	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.i
-.PHONY : src/Canvas/Color.cpp.i
-
-src/Canvas/Color.s: src/Canvas/Color.cpp.s
-
-.PHONY : src/Canvas/Color.s
-
-# target to generate assembly for a file
-src/Canvas/Color.cpp.s:
-	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.s
-.PHONY : src/Canvas/Color.cpp.s
-
 src/Primitives/Tuple.o: src/Primitives/Tuple.cpp.o
 
 .PHONY : src/Primitives/Tuple.o
@@ -257,6 +230,60 @@ src/Primitives/Tuple.s: src/Primitives/Tuple.cpp.s
 src/Primitives/Tuple.cpp.s:
 	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.s
 .PHONY : src/Primitives/Tuple.cpp.s
+
+src/Render/Canvas.o: src/Render/Canvas.cpp.o
+
+.PHONY : src/Render/Canvas.o
+
+# target to build an object file
+src/Render/Canvas.cpp.o:
+	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o
+.PHONY : src/Render/Canvas.cpp.o
+
+src/Render/Canvas.i: src/Render/Canvas.cpp.i
+
+.PHONY : src/Render/Canvas.i
+
+# target to preprocess a source file
+src/Render/Canvas.cpp.i:
+	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.i
+.PHONY : src/Render/Canvas.cpp.i
+
+src/Render/Canvas.s: src/Render/Canvas.cpp.s
+
+.PHONY : src/Render/Canvas.s
+
+# target to generate assembly for a file
+src/Render/Canvas.cpp.s:
+	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.s
+.PHONY : src/Render/Canvas.cpp.s
+
+src/Render/Color.o: src/Render/Color.cpp.o
+
+.PHONY : src/Render/Color.o
+
+# target to build an object file
+src/Render/Color.cpp.o:
+	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.o
+.PHONY : src/Render/Color.cpp.o
+
+src/Render/Color.i: src/Render/Color.cpp.i
+
+.PHONY : src/Render/Color.i
+
+# target to preprocess a source file
+src/Render/Color.cpp.i:
+	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.i
+.PHONY : src/Render/Color.cpp.i
+
+src/Render/Color.s: src/Render/Color.cpp.s
+
+.PHONY : src/Render/Color.s
+
+# target to generate assembly for a file
+src/Render/Color.cpp.s:
+	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.s
+.PHONY : src/Render/Color.cpp.s
 
 src/Simulation/Environment.o: src/Simulation/Environment.cpp.o
 
@@ -330,12 +357,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/Canvas/Color.o"
-	@echo "... src/Canvas/Color.i"
-	@echo "... src/Canvas/Color.s"
 	@echo "... src/Primitives/Tuple.o"
 	@echo "... src/Primitives/Tuple.i"
 	@echo "... src/Primitives/Tuple.s"
+	@echo "... src/Render/Canvas.o"
+	@echo "... src/Render/Canvas.i"
+	@echo "... src/Render/Canvas.s"
+	@echo "... src/Render/Color.o"
+	@echo "... src/Render/Color.i"
+	@echo "... src/Render/Color.s"
 	@echo "... src/Simulation/Environment.o"
 	@echo "... src/Simulation/Environment.i"
 	@echo "... src/Simulation/Environment.s"

@@ -7,7 +7,7 @@
 
 #include "../Primitives/Tuple.h"
 
-namespace Canvas {
+namespace Render {
     class Color : public Primitives::Tuple {
 
     public:
@@ -23,8 +23,12 @@ namespace Canvas {
 
         bool operator ==(const Color&) const;
         Color operator *(const Color&) const;
+        Color& operator=(const Color&);
+
+
 
     };
+    std::ostream& operator<<(std::ostream&, const Color&);
 }
 
 

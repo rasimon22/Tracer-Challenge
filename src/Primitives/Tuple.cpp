@@ -105,6 +105,18 @@ void Primitives::Tuple::set(float _x, float _y, float _z, float _w) {
     this -> w = _w;
 }
 
+Primitives::Tuple& Primitives::Tuple::operator=(const Primitives::Tuple &other) {
+    if(!(other == *this)) {
+
+        x = other.x;
+        y = other.y;
+        z = other.z;
+        w = other.w;
+        _type = other._type;
+    }
+    return *this;
+}
+
 Primitives::Tuple Primitives::vector(float x, float y, float z) {
     return Primitives::Tuple(x, y, z, 0.0f);
 }
@@ -128,7 +140,7 @@ bool Primitives::float_equal(float a, float b) {
 }
 
 std::ostream& Primitives::operator<<(std::ostream &os, const Primitives::Tuple &rhs) {
-    os << '(' << rhs.x << ", " << rhs.y << ", " << rhs.z << ", " << rhs.w << ')';
+    os << rhs.x << " " << rhs.y << " " << rhs.z << " " << rhs.w << ' ';
     return os;
 }
 

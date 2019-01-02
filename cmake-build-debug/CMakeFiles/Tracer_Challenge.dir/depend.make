@@ -3,8 +3,9 @@
 
 CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o: ../Test/CanvasTest.cpp
 CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o: ../Test/catch.hpp
-CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o: ../src/Canvas/Color.h
 CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o: ../src/Primitives/Tuple.h
+CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o: ../src/Render/Canvas.h
+CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o: ../src/Render/Color.h
 
 CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o: ../Test/TupleTest.cpp
 CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o: ../Test/catch.hpp
@@ -13,15 +14,22 @@ CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o: ../src/Primitives/Tuple.h
 CMakeFiles/Tracer_Challenge.dir/main.cpp.o: ../Test/catch.hpp
 CMakeFiles/Tracer_Challenge.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Tracer_Challenge.dir/main.cpp.o: ../src/Primitives/Tuple.h
+CMakeFiles/Tracer_Challenge.dir/main.cpp.o: ../src/Render/Canvas.h
+CMakeFiles/Tracer_Challenge.dir/main.cpp.o: ../src/Render/Color.h
 CMakeFiles/Tracer_Challenge.dir/main.cpp.o: ../src/Simulation/Environment.h
 CMakeFiles/Tracer_Challenge.dir/main.cpp.o: ../src/Simulation/Projectile.h
 
-CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.o: ../src/Canvas/Color.cpp
-CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.o: ../src/Canvas/Color.h
-CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.o: ../src/Primitives/Tuple.h
-
 CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o: ../src/Primitives/Tuple.cpp
 CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o: ../src/Primitives/Tuple.h
+
+CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o: ../src/Primitives/Tuple.h
+CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o: ../src/Render/Canvas.cpp
+CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o: ../src/Render/Canvas.h
+CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o: ../src/Render/Color.h
+
+CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.o: ../src/Primitives/Tuple.h
+CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.o: ../src/Render/Color.cpp
+CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.o: ../src/Render/Color.h
 
 CMakeFiles/Tracer_Challenge.dir/src/Simulation/Environment.cpp.o: ../src/Primitives/Tuple.h
 CMakeFiles/Tracer_Challenge.dir/src/Simulation/Environment.cpp.o: ../src/Simulation/Environment.cpp

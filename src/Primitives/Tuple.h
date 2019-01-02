@@ -40,11 +40,13 @@ namespace Primitives {
 
         void operator/=(const float&);
 
+        Tuple& operator=(const Tuple&);
+
         double magnitude();
 
         Tuple normalize();
 
-    private:
+    protected:
         Type _type;
 
     };

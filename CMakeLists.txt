@@ -10,7 +10,7 @@ set(PRIMITIVES src/Primitives/Tuple.h src/Primitives/Tuple.cpp)
 set(SIMULATION src/Simulation/Environment.h src/Simulation/Environment.cpp src/Simulation/Projectile.h
         src/Simulation/Projectile.cpp)
 
-set(CANVAS src/Canvas src/Canvas/Color.cpp src/Canvas/Color.h)
+set(CANVAS src/Render src/Render/Color.cpp src/Render/Color.h src/Render/Canvas.cpp src/Render/Canvas.h)
 
 set(SOURCE main.cpp ${TEST} ${PRIMITIVES} ${SIMULATION} ${CANVAS})
 

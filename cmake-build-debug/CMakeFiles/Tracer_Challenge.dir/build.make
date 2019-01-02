@@ -135,18 +135,31 @@ CMakeFiles/Tracer_Challenge.dir/src/Simulation/Projectile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tracer_Challenge.dir/src/Simulation/Projectile.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rasimon/Documents/Tracer_Challenge/src/Simulation/Projectile.cpp -o CMakeFiles/Tracer_Challenge.dir/src/Simulation/Projectile.cpp.s
 
-CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.o: CMakeFiles/Tracer_Challenge.dir/flags.make
-CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.o: ../src/Canvas/Color.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.o -c /Users/rasimon/Documents/Tracer_Challenge/src/Canvas/Color.cpp
+CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.o: CMakeFiles/Tracer_Challenge.dir/flags.make
+CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.o: ../src/Render/Color.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.o -c /Users/rasimon/Documents/Tracer_Challenge/src/Render/Color.cpp
 
-CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rasimon/Documents/Tracer_Challenge/src/Canvas/Color.cpp > CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.i
+CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rasimon/Documents/Tracer_Challenge/src/Render/Color.cpp > CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.i
 
-CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rasimon/Documents/Tracer_Challenge/src/Canvas/Color.cpp -o CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.s
+CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rasimon/Documents/Tracer_Challenge/src/Render/Color.cpp -o CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.s
+
+CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o: CMakeFiles/Tracer_Challenge.dir/flags.make
+CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o: ../src/Render/Canvas.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o -c /Users/rasimon/Documents/Tracer_Challenge/src/Render/Canvas.cpp
+
+CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rasimon/Documents/Tracer_Challenge/src/Render/Canvas.cpp > CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.i
+
+CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rasimon/Documents/Tracer_Challenge/src/Render/Canvas.cpp -o CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.s
 
 # Object files for target Tracer_Challenge
 Tracer_Challenge_OBJECTS = \
@@ -156,7 +169,8 @@ Tracer_Challenge_OBJECTS = \
 "CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o" \
 "CMakeFiles/Tracer_Challenge.dir/src/Simulation/Environment.cpp.o" \
 "CMakeFiles/Tracer_Challenge.dir/src/Simulation/Projectile.cpp.o" \
-"CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.o"
+"CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.o" \
+"CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o"
 
 # External object files for target Tracer_Challenge
 Tracer_Challenge_EXTERNAL_OBJECTS =
@@ -167,10 +181,11 @@ Tracer_Challenge: CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o
 Tracer_Challenge: CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o
 Tracer_Challenge: CMakeFiles/Tracer_Challenge.dir/src/Simulation/Environment.cpp.o
 Tracer_Challenge: CMakeFiles/Tracer_Challenge.dir/src/Simulation/Projectile.cpp.o
-Tracer_Challenge: CMakeFiles/Tracer_Challenge.dir/src/Canvas/Color.cpp.o
+Tracer_Challenge: CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.o
+Tracer_Challenge: CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o
 Tracer_Challenge: CMakeFiles/Tracer_Challenge.dir/build.make
 Tracer_Challenge: CMakeFiles/Tracer_Challenge.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Tracer_Challenge"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Tracer_Challenge"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Tracer_Challenge.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -92,19 +92,25 @@
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/main.cpp">
 			<Option target="Tracer_Challenge"/>
 		</Unit>
-		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Canvas">
-			<Option target="Tracer_Challenge"/>
-		</Unit>
-		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Canvas/Color.cpp">
-			<Option target="Tracer_Challenge"/>
-		</Unit>
-		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Canvas/Color.h">
-			<Option target="Tracer_Challenge"/>
-		</Unit>
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.cpp">
 			<Option target="Tracer_Challenge"/>
 		</Unit>
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.h">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Render">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Render/Canvas.cpp">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Render/Canvas.h">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Render/Color.cpp">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Render/Color.h">
 			<Option target="Tracer_Challenge"/>
 		</Unit>
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Simulation/Environment.cpp">
