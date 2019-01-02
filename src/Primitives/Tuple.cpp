@@ -8,101 +8,101 @@
 using Primitives::float_equal;
 
 Primitives::Tuple::Tuple(float _x, float _y, float _z, float _w): x(_x), y(_y), z(_z), w(_w){
-    if(w == 1.0f)
+    if(this -> w == 1.0f)
     {
-        _type = Type::Point;
+        this -> _type = Type::Point;
     } else {
-        _type = Type::Vector;
+        this -> _type = Type::Vector;
     }
 }
 
 Primitives::Tuple::Type Primitives::Tuple::type() {
-    return _type;
+    return this -> _type;
 }
 
 bool Primitives::Tuple::operator==(const Primitives::Tuple &rhs) const {
-    return (float_equal(x, rhs.x) &&
-            float_equal(y, rhs.y) &&
-            float_equal(z, rhs.z) &&
-            float_equal(w, rhs.w));
+    return (float_equal(this -> x, rhs.x) &&
+            float_equal(this -> y, rhs.y) &&
+            float_equal(this -> z, rhs.z) &&
+            float_equal(this -> w, rhs.w));
 
 }
 
 //TODO: Revisit how the returned type (point vs vector) is decided once more progress has been made
 Primitives::Tuple Primitives::Tuple::operator+(const Primitives::Tuple &rhs) const {
-    return Primitives::Tuple(x + rhs.x, y + rhs.y, z + rhs.z, w + rhs.w);
+    return Primitives::Tuple(this -> x + rhs.x, this -> y + rhs.y, this -> z + rhs.z, this -> w + rhs.w);
 }
 
 //TODO: Revisit how the returned type (point vs vector) is decided once more progress has been made
 Primitives::Tuple Primitives::Tuple::operator-(const Primitives::Tuple &rhs) const {
-    return Primitives::Tuple(x - rhs.x, y - rhs.y, z - rhs.z, w - rhs.w);
+    return Primitives::Tuple(this -> x - rhs.x, this -> y - rhs.y, this -> z - rhs.z, this -> w - rhs.w);
 }
 
 Primitives::Tuple Primitives::Tuple::operator-() const {
-    Primitives::Tuple tup(0 - x, 0 - y, 0 - z, 0 - w);
+    Primitives::Tuple tup(0 - this -> x, 0 - this -> y, 0 - this -> z, 0 - this -> w);
     return tup;
 }
 
 Primitives::Tuple Primitives::Tuple::operator*(const float &scalar) {
-    Primitives::Tuple tup(x * scalar,
-                          y * scalar,
-                          z * scalar,
-                          w * scalar);
+    Primitives::Tuple tup(this -> x * scalar,
+                          this -> y * scalar,
+                          this -> z * scalar,
+                          this -> w * scalar);
     return tup;
 
 }
 
 void Primitives::Tuple::operator*=(const float &scalar) {
-    x *= scalar;
-    y *= scalar;
-    z *= scalar;
-    w *= scalar;
+    this -> x *= scalar;
+    this -> y *= scalar;
+    this -> z *= scalar;
+    this -> w *= scalar;
 }
 
 void Primitives::Tuple::operator/=(const float &scalar) {
-    x /= scalar;
-    y /= scalar;
-    z /= scalar;
-    w /= scalar;
+    this -> x /= scalar;
+    this -> y /= scalar;
+    this -> z /= scalar;
+    this -> w /= scalar;
 }
 
 Primitives::Tuple Primitives::Tuple::operator/(const float &scalar) {
-    Primitives::Tuple tup(x / scalar,
-                          y / scalar,
-                          z / scalar,
-                          w / scalar);
+    Primitives::Tuple tup(this -> x / scalar,
+                          this -> y / scalar,
+                          this -> z / scalar,
+                          this -> w / scalar);
     return tup;
 }
 
 double Primitives::Tuple::magnitude() {
-    double sum = pow(x, 2.0) +
-                pow(y, 2.0) +
-                pow(z, 2.0) +
-                pow(w, 2.0);
+    double sum = pow(this -> x, 2.0) +
+                pow(this -> y, 2.0) +
+                pow(this -> z, 2.0) +
+                pow(this -> w, 2.0);
     return sqrt(sum);
 
 }
 
 Primitives::Tuple Primitives::Tuple::normalize() {
-    float mag = magnitude();
-    return Primitives::vector(x / mag,
-            y / mag,
-            z / mag);
+    float mag = this -> magnitude();
+    return Primitives::vector(this -> x / mag,
+            this -> y / mag,
+            this -> z / mag);
 }
 
 Primitives::Tuple::Tuple(){
-    x = 0.0f;
-    y = 0.0f;
-    z = 0.0f;
-    w = 0.0f;
-    _type = Primitives::Tuple::Point;
+    this -> x = 0.0f;
+    this -> y = 0.0f;
+    this -> z = 0.0f;
+    this -> w = 0.0f;
+    this -> _type = Primitives::Tuple::Point;
 }
 
 void Primitives::Tuple::set(float _x, float _y, float _z, float _w) {
-    x = _x;
-    y = _y;
-    z = _z;
-    w = _w;
+    this -> x = _x;
+    this -> y = _y;
+    this -> z = _z;
+    this -> w = _w;
 }
 
 Primitives::Tuple& Primitives::Tuple::operator=(const Primitives::Tuple &other) {

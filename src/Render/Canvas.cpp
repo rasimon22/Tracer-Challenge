@@ -8,13 +8,13 @@
 #include <fstream>
 
 Render::Canvas::Canvas(size_t w, size_t h): width(w), height(h){
-    data = std::make_unique<Render::Color[]>(w * h);
+    this -> data = std::make_unique<Render::Color[]>(w * h);
 }
 
 void Render::Canvas::print(std::ostream& stream) {
-    for(auto i = 0; i < height; ++i){
-        for(auto j = 0; j < width; ++j){
-           stream << data[i * width + j];
+    for(auto i = 0; i < this -> height; ++i){
+        for(auto j = 0; j < this -> width; ++j){
+           stream << data[i * this -> width + j];
         }
         stream << std::endl;
     }

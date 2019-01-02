@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.cpp
+Tuple.h
+/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.h
+cmath
+-
+iostream
+-
+
 /Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.h
 iostream
 -
@@ -29,6 +37,10 @@ memory
 -
 string
 -
+
+/Users/rasimon/Documents/Tracer_Challenge/src/Render/Color.cpp
+Color.h
+/Users/rasimon/Documents/Tracer_Challenge/src/Render/Color.h
 
 /Users/rasimon/Documents/Tracer_Challenge/src/Render/Color.h
 ../Primitives/Tuple.h

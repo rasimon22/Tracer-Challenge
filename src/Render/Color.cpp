@@ -5,34 +5,34 @@
 #include "Color.h"
 
 Render::Color::Color(): red(this -> x), green(this -> y), blue(this -> z){
-    w = 1.0f;
+    this -> w = 1.0f;
 }
 
 Render::Color::Color(float r, float g, float b): red(this -> x), green(this -> y), blue(this -> z){
-    x = r;
-    y = g;
-    z = b;
-    w = 1.0f;
+    this -> x = r;
+    this -> y = g;
+    this -> z = b;
+    this -> w = 1.0f;
 }
 
 bool Render::Color::operator==(const Render::Color &rhs) const {
-    return (Primitives::float_equal(x, rhs.x) &&
-            Primitives::float_equal(y, rhs.y)&&
-            Primitives::float_equal(z, rhs.z));
+    return (Primitives::float_equal(this -> x, rhs.x) &&
+            Primitives::float_equal(this -> y, rhs.y)&&
+            Primitives::float_equal(this -> z, rhs.z));
 }
 
 Render::Color::Color(const Primitives::Tuple &rhs): red(this -> x), green(this -> y), blue(this -> z){
-    x = rhs.x;
-    y = rhs.y;
-    z = rhs .z;
-    w = 1.0f;
+    this -> x = rhs.x;
+    this -> y = rhs.y;
+    this -> z = rhs .z;
+    this -> w = 1.0f;
 
 }
 
 Render::Color Render::Color::operator*(const Render::Color &rhs) const {
-    Render::Color ret(red * rhs.red,
-                      green * rhs.green,
-                      blue * rhs.blue);
+    Render::Color ret(this -> red * rhs.red,
+                      this -> green * rhs.green,
+                      this -> blue * rhs.blue);
     return ret;
 }
 
