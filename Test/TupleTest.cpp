@@ -1,7 +1,7 @@
 //
 // Created by Rick Simon on 2018-12-17.
 //
-#if 0
+#if 1
 
 #include "catch.hpp"
 #include <cmath>

@@ -2,7 +2,7 @@
 // Created by Rick Simon on 2018-12-28.
 //
 
-#if 0
+#if 1
 
 #include "catch.hpp"
 #include <cmath>
@@ -61,7 +61,7 @@ TEST_CASE("Create Canvas of certain width")
 TEST_CASE("Writing Pixel to Canvas")
 {
     Render::Canvas c1(100, 200);
-    Render::Color red(255.0f,0.0f,100.0f);
+    Render::Color red(255.0f,255.0f,100.0f);
 
     c1.at(2, 3) = red;
 

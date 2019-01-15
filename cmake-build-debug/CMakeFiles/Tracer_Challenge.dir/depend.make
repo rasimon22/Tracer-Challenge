@@ -7,6 +7,11 @@ CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o: ../src/Primitives/Tuple.h
 CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o: ../src/Render/Canvas.h
 CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o: ../src/Render/Color.h
 
+CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.o: ../Test/MatrixTest.cpp
+CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.o: ../Test/catch.hpp
+CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.o: ../src/Primitives/Matrix.h
+CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.o: ../src/Primitives/Tuple.h
+
 CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o: ../Test/TupleTest.cpp
 CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o: ../Test/catch.hpp
 CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o: ../src/Primitives/Tuple.h
@@ -18,6 +23,9 @@ CMakeFiles/Tracer_Challenge.dir/main.cpp.o: ../src/Render/Canvas.h
 CMakeFiles/Tracer_Challenge.dir/main.cpp.o: ../src/Render/Color.h
 CMakeFiles/Tracer_Challenge.dir/main.cpp.o: ../src/Simulation/Environment.h
 CMakeFiles/Tracer_Challenge.dir/main.cpp.o: ../src/Simulation/Projectile.h
+
+CMakeFiles/Tracer_Challenge.dir/src/Primitives/Matrix.cpp.o: ../src/Primitives/Matrix.cpp
+CMakeFiles/Tracer_Challenge.dir/src/Primitives/Matrix.cpp.o: ../src/Primitives/Matrix.h
 
 CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o: ../src/Primitives/Tuple.cpp
 CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o: ../src/Primitives/Tuple.h

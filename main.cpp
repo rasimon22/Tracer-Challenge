@@ -1,4 +1,4 @@
-#define TEST 0
+#define TEST 1
 
 #if TEST
 #define CATCH_CONFIG_MAIN
@@ -16,7 +16,6 @@
 int main() {
     Simulation::Projectile proj(Primitives::point(0, 1, 0), Primitives::vector(5, 5, 0));
     Simulation::Environment env(Primitives::vector(0, -0.1f, 0), Primitives::vector(0.0, 0.0, 0));
-    std::cout << proj.getPosition() << std::endl;
     Render::Canvas canv(1000,200);
     Render::Color red(255.0, 0.0, 0.0);
     while(proj.getPosition().y > 0)

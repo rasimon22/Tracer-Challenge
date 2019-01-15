@@ -83,6 +83,9 @@
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/Test/CanvasTest.cpp">
 			<Option target="Tracer_Challenge"/>
 		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/Test/MatrixTest.cpp">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/Test/TupleTest.cpp">
 			<Option target="Tracer_Challenge"/>
 		</Unit>
@@ -90,6 +93,12 @@
 			<Option target="Tracer_Challenge"/>
 		</Unit>
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/main.cpp">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Matrix.cpp">
+			<Option target="Tracer_Challenge"/>
+		</Unit>
+		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Matrix.h">
 			<Option target="Tracer_Challenge"/>
 		</Unit>
 		<Unit filename="/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.cpp">

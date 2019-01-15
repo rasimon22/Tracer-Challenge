@@ -150,6 +150,33 @@ Test/CanvasTest.cpp.s:
 	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.s
 .PHONY : Test/CanvasTest.cpp.s
 
+Test/MatrixTest.o: Test/MatrixTest.cpp.o
+
+.PHONY : Test/MatrixTest.o
+
+# target to build an object file
+Test/MatrixTest.cpp.o:
+	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.o
+.PHONY : Test/MatrixTest.cpp.o
+
+Test/MatrixTest.i: Test/MatrixTest.cpp.i
+
+.PHONY : Test/MatrixTest.i
+
+# target to preprocess a source file
+Test/MatrixTest.cpp.i:
+	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.i
+.PHONY : Test/MatrixTest.cpp.i
+
+Test/MatrixTest.s: Test/MatrixTest.cpp.s
+
+.PHONY : Test/MatrixTest.s
+
+# target to generate assembly for a file
+Test/MatrixTest.cpp.s:
+	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.s
+.PHONY : Test/MatrixTest.cpp.s
+
 Test/TupleTest.o: Test/TupleTest.cpp.o
 
 .PHONY : Test/TupleTest.o
@@ -203,6 +230,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+src/Primitives/Matrix.o: src/Primitives/Matrix.cpp.o
+
+.PHONY : src/Primitives/Matrix.o
+
+# target to build an object file
+src/Primitives/Matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Primitives/Matrix.cpp.o
+.PHONY : src/Primitives/Matrix.cpp.o
+
+src/Primitives/Matrix.i: src/Primitives/Matrix.cpp.i
+
+.PHONY : src/Primitives/Matrix.i
+
+# target to preprocess a source file
+src/Primitives/Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Primitives/Matrix.cpp.i
+.PHONY : src/Primitives/Matrix.cpp.i
+
+src/Primitives/Matrix.s: src/Primitives/Matrix.cpp.s
+
+.PHONY : src/Primitives/Matrix.s
+
+# target to generate assembly for a file
+src/Primitives/Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/Tracer_Challenge.dir/build.make CMakeFiles/Tracer_Challenge.dir/src/Primitives/Matrix.cpp.s
+.PHONY : src/Primitives/Matrix.cpp.s
 
 src/Primitives/Tuple.o: src/Primitives/Tuple.cpp.o
 
@@ -351,12 +405,18 @@ help:
 	@echo "... Test/CanvasTest.o"
 	@echo "... Test/CanvasTest.i"
 	@echo "... Test/CanvasTest.s"
+	@echo "... Test/MatrixTest.o"
+	@echo "... Test/MatrixTest.i"
+	@echo "... Test/MatrixTest.s"
 	@echo "... Test/TupleTest.o"
 	@echo "... Test/TupleTest.i"
 	@echo "... Test/TupleTest.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/Primitives/Matrix.o"
+	@echo "... src/Primitives/Matrix.i"
+	@echo "... src/Primitives/Matrix.s"
 	@echo "... src/Primitives/Tuple.o"
 	@echo "... src/Primitives/Tuple.i"
 	@echo "... src/Primitives/Tuple.s"
