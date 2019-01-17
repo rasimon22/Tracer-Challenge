@@ -26,6 +26,7 @@ CMakeFiles/Tracer_Challenge.dir/main.cpp.o: ../src/Simulation/Projectile.h
 
 CMakeFiles/Tracer_Challenge.dir/src/Primitives/Matrix.cpp.o: ../src/Primitives/Matrix.cpp
 CMakeFiles/Tracer_Challenge.dir/src/Primitives/Matrix.cpp.o: ../src/Primitives/Matrix.h
+CMakeFiles/Tracer_Challenge.dir/src/Primitives/Matrix.cpp.o: ../src/Primitives/Tuple.h
 
 CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o: ../src/Primitives/Tuple.cpp
 CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o: ../src/Primitives/Tuple.h

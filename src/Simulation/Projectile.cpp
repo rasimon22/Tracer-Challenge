@@ -28,4 +28,3 @@ void Simulation::Projectile::setPosition(const Primitives::Tuple &pos) {
 Primitives::Tuple Simulation::Projectile::getMomentum() {
     return this -> momentum;
 }
-

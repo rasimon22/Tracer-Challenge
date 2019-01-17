@@ -7,6 +7,7 @@
 
 #include <memory>
 #include <vector>
+#include "Tuple.h"
 namespace Primitives {
     class Matrix {
 
@@ -16,10 +17,14 @@ namespace Primitives {
         Matrix(const Matrix&);
         Matrix(std::vector<float>, size_t, size_t);
         float& at(size_t, size_t);
+        bool operator==(const Matrix&) const;
+        Matrix operator*(Matrix&);
+        Matrix operator*(Primitives::Tuple&);
 
     private:
         std::unique_ptr<float[]> data;
         size_t height, width;
+        float calculateCell(size_t, size_t, Matrix&, Matrix&);
 
 
     };

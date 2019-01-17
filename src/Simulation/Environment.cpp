@@ -30,7 +30,6 @@ Simulation::Environment::Environment() {
 Simulation::Environment::Environment(Primitives::Tuple g, Primitives::Tuple w) {
    this -> gravity = g;
    this -> wind = w;
-
 }
 
 Simulation::Projectile Simulation::tick(Simulation::Environment &env, Simulation::Projectile &proj) {

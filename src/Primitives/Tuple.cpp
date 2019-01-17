@@ -49,7 +49,6 @@ Primitives::Tuple Primitives::Tuple::operator*(const float &scalar) {
                           this -> z * scalar,
                           this -> w * scalar);
     return tup;
-
 }
 
 void Primitives::Tuple::operator*=(const float &scalar) {
@@ -84,7 +83,7 @@ double Primitives::Tuple::magnitude() {
 }
 
 Primitives::Tuple Primitives::Tuple::normalize() {
-    float mag = this -> magnitude();
+    auto mag = static_cast<float>(this -> magnitude());
     return Primitives::vector(this -> x / mag,
             this -> y / mag,
             this -> z / mag);
@@ -156,4 +155,3 @@ Primitives::Tuple Primitives::cross_product(const Primitives::Tuple &a, const Pr
                               a.z * b.x - a.x * b.z,
                               a.x * b.y - a.y * b.x);
 }
-
