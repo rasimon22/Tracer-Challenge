@@ -69,22 +69,36 @@ float Primitives::Matrix::calculateCell(size_t x, size_t y, Primitives::Matrix &
     return result;
 }
 
-Primitives::Matrix Primitives::Matrix::operator*(Primitives::Tuple &rhs) {
-    if(width != 4){
-        throw "Mismatched Dimensions";
-    }
-    Matrix m(1,4);
-    m.at(0,0) = rhs.x;
-    m.at(0,1) = rhs.y;
-    m.at(0,2) = rhs.z;
-    m.at(0,3) = rhs.w;
-    Matrix result(1,4);
 
-    for(auto row = 0; row < m.height; ++row){
-        for(auto column = 0; column < m.width; ++column){
-            result.at(column, row) = calculateCell(column, row, *this, m);
+void Primitives::Matrix::print(std::ostream &os) {
+    for(auto i = 0; i < height; ++i){
+        for(auto j = 0; j < width; ++j){
+            os << data[i * width + j] << ' ';
         }
+        os << std::endl;
     }
-    return result;
+}
+
+Primitives::Matrix::Matrix(Primitives::Tuple &rhs): height(4), width(1){
+    data = std::make_unique<float[]>(4);
+    data[0] = rhs.x;
+    data[1] = rhs.y;
+    data[2] = rhs.z;
+    data[3] = rhs.w;
+
+
+}
+
+Primitives::Matrix Primitives::Matrix::operator*(Primitives::Tuple &rhs) {
+    Matrix m(rhs);
+    return *this * m;
+}
+
+Primitives::Matrix Primitives::Matrix::identity_matrix() {
+    Matrix m(4,4);
+    for(auto i = 0; i < 4; ++i){
+        m.at(i,i) = 1;
+    }
+    return m;
 }
 

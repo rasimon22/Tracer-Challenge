@@ -7,6 +7,7 @@
 
 #include <memory>
 #include <vector>
+#include <iostream>
 #include "Tuple.h"
 namespace Primitives {
     class Matrix {
@@ -16,10 +17,14 @@ namespace Primitives {
         Matrix(size_t, size_t);
         Matrix(const Matrix&);
         Matrix(std::vector<float>, size_t, size_t);
+        Matrix(Primitives::Tuple&);
         float& at(size_t, size_t);
         bool operator==(const Matrix&) const;
         Matrix operator*(Matrix&);
         Matrix operator*(Primitives::Tuple&);
+        void print(std::ostream&);
+        static Matrix identity_matrix();
+
 
     private:
         std::unique_ptr<float[]> data;
@@ -28,6 +33,7 @@ namespace Primitives {
 
 
     };
+
 }
 
 
