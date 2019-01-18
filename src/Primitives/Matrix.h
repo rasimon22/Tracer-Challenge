@@ -24,6 +24,7 @@ namespace Primitives {
         Matrix operator*(Primitives::Tuple&);
         void print(std::ostream&);
         static Matrix identity_matrix();
+        Matrix transpose();
 
 
     private:

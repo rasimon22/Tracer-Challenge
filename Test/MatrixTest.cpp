@@ -110,4 +110,54 @@ TEST_CASE("Identity Matrix"){
     Primitives::Tuple t1(1,2,3,1);
     REQUIRE(Primitives::Matrix::identity_matrix() * t1 == static_cast<Primitives::Matrix>(t1));
 }
+
+TEST_CASE("Matrix Transposition"){
+    REQUIRE(Primitives::Matrix::identity_matrix().transpose() == Primitives::Matrix::identity_matrix());
+
+    Primitives::Matrix a(4,4);
+    Primitives::Matrix b(4,4);
+
+    a.at(0,0) = 0;
+    a.at(1,0) = 9;
+    a.at(2,0) = 3;
+    a.at(3,0) = 0;
+
+    a.at(0,1) = 9;
+    a.at(1,1) = 8;
+    a.at(2,1) = 0;
+    a.at(3,1) = 8;
+
+    a.at(0,2) = 1;
+    a.at(1,2) = 8;
+    a.at(2,2) = 5;
+    a.at(3,2) = 3;
+
+    a.at(0,3) = 0;
+    a.at(1,3) = 0;
+    a.at(2,3) = 5;
+    a.at(3,3) = 8;
+
+    b.at(0,0) = 0;
+    b.at(1,0) = 9;
+    b.at(2,0) = 1;
+    b.at(3,0) = 0;
+
+    b.at(0,1) = 9;
+    b.at(1,1) = 8;
+    b.at(2,1) = 8;
+    b.at(3,1) = 0;
+
+    b.at(0,2) = 3;
+    b.at(1,2) = 0;
+    b.at(2,2) = 5;
+    b.at(3,2) = 5;
+
+    b.at(0,3) = 0;
+    b.at(1,3) = 8;
+    b.at(2,3) = 3;
+    b.at(3,3) = 8;
+
+    REQUIRE(a.transpose() == b);
+}
+
 #endif

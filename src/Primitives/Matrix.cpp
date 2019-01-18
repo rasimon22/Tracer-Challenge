@@ -102,3 +102,13 @@ Primitives::Matrix Primitives::Matrix::identity_matrix() {
     return m;
 }
 
+Primitives::Matrix Primitives::Matrix::transpose() {
+    Matrix m(height, width);
+    for(auto row = 0; row < height; ++row){
+        for(auto column = 0; column < width; ++column){
+            m.at(row, column) = this->at(column, row);
+        }
+    }
+    return m;
+}
+
