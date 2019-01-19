@@ -160,4 +160,15 @@ TEST_CASE("Matrix Transposition"){
     REQUIRE(a.transpose() == b);
 }
 
+TEST_CASE("Matrix Determinants") {
+    Primitives::Matrix a(2,2);
+    a.at(0, 0) = 1;
+    a.at(1, 0) = 5;
+    a.at(0, 1) = -3;
+    a.at(1, 1) = 2;
+    SECTION("2x2 Determinant") {
+        REQUIRE(Primitives::Matrix::determinant(a) == 17);
+    }
+}
+
 #endif

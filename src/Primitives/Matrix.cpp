@@ -4,6 +4,7 @@
 
 #include "Matrix.h"
 #include "Tuple.h"
+#include <cstring>
 
 Primitives::Matrix::Matrix(): width(4), height(4), data(std::make_unique<float[]>(16)) {
     std::memset(data.get(), 0, sizeof(float) * width * height);
@@ -20,7 +21,7 @@ Primitives::Matrix::Matrix(size_t height, size_t width): width(width), height(he
 //TODO:Refactor initialization out of I-list into self assignment check
 Primitives::Matrix::Matrix(const Primitives::Matrix& rhs):width(rhs.width), height(rhs.height),
                                                           data(std::make_unique<float[]>(rhs.width*rhs.height)){
-    for(auto i = 0; i < width*height; ++i){
+    for(size_t i = 0; i < width*height; ++i){
         data[i] = rhs.data[i];
     }
 }
@@ -38,7 +39,7 @@ bool Primitives::Matrix::operator==(const Primitives::Matrix& rhs) const{
     if(height == rhs.height && width == rhs.width){
         float* l_ptr = &data[0];
         float* r_ptr = &rhs.data[0];
-        for(auto i = 0; i < width * height; ++i){
+        for(size_t i = 0; i < width * height; ++i){
             if(*l_ptr != * r_ptr) return false;
             ++l_ptr;
             ++r_ptr;
@@ -53,8 +54,8 @@ Primitives::Matrix Primitives::Matrix::operator*(Primitives::Matrix &rhs){
         throw "Mismatched Dimensions";
     }
     Matrix m(height, rhs.width);
-    for(auto row = 0; row < m.height; ++row){
-        for(auto column = 0; column < m.width; ++column){
+    for(size_t row = 0; row < m.height; ++row){
+        for(size_t column = 0; column < m.width; ++column){
             m.at(column, row) = calculateCell(column, row, *this, rhs);
         }
     }
@@ -63,7 +64,7 @@ Primitives::Matrix Primitives::Matrix::operator*(Primitives::Matrix &rhs){
 
 float Primitives::Matrix::calculateCell(size_t x, size_t y, Primitives::Matrix & m1, Primitives::Matrix &m2) {
     float result = 0;
-    for(auto i = 0; i < m1.width; ++i) {
+    for(size_t i = 0; i < m1.width; ++i) {
         result += m1.at(i, y) * m2.at(x, i);
     }
     return result;
@@ -71,7 +72,7 @@ float Primitives::Matrix::calculateCell(size_t x, size_t y, Primitives::Matrix &
 
 
 void Primitives::Matrix::print(std::ostream &os) {
-    for(auto i = 0; i < height; ++i){
+    for(size_t i = 0; i < height; ++i){
         for(auto j = 0; j < width; ++j){
             os << data[i * width + j] << ' ';
         }
@@ -96,7 +97,7 @@ Primitives::Matrix Primitives::Matrix::operator*(Primitives::Tuple &rhs) {
 
 Primitives::Matrix Primitives::Matrix::identity_matrix() {
     Matrix m(4,4);
-    for(auto i = 0; i < 4; ++i){
+    for(size_t i = 0; i < 4; ++i){
         m.at(i,i) = 1;
     }
     return m;
@@ -104,11 +105,23 @@ Primitives::Matrix Primitives::Matrix::identity_matrix() {
 
 Primitives::Matrix Primitives::Matrix::transpose() {
     Matrix m(height, width);
-    for(auto row = 0; row < height; ++row){
-        for(auto column = 0; column < width; ++column){
+    for(size_t row = 0; row < height; ++row){
+        for(size_t column = 0; column < width; ++column){
             m.at(row, column) = this->at(column, row);
         }
     }
     return m;
 }
 
+float Primitives::Matrix::determinant(Primitives::Matrix &mat) {
+    if(mat.width == 2 && mat.height == 2){
+        return mat.at(0,0) * mat.at(1,1) - mat.at(1,0) * mat.at(0,1);
+    } else {
+        throw "Matrix too large to find determinant";
+    }
+}
+
+Primitives::Matrix Primitives::Matrix::sub_matrix(Primitives::Matrix &mat, size_t row, size_t column) {
+    
+
+}

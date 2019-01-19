@@ -25,6 +25,8 @@ namespace Primitives {
         void print(std::ostream&);
         static Matrix identity_matrix();
         Matrix transpose();
+        static float determinant(Matrix&);
+        static Matrix sub_matrix(Matrix&, size_t, size_t);
 
 
     private:

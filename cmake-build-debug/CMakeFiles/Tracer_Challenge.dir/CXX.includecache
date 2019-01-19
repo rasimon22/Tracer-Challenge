@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/rasimon/Documents/Tracer_Challenge/Test/MatrixTest.cpp
+/home/rasimon/workspace/Tracer-Challenge/Test/MatrixTest.cpp
 catch.hpp
-/Users/rasimon/Documents/Tracer_Challenge/Test/catch.hpp
+/home/rasimon/workspace/Tracer-Challenge/Test/catch.hpp
 ../src/Primitives/Tuple.h
-/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.h
+/home/rasimon/workspace/Tracer-Challenge/src/Primitives/Tuple.h
 ../src/Primitives/Matrix.h
-/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Matrix.h
+/home/rasimon/workspace/Tracer-Challenge/src/Primitives/Matrix.h
 iostream
 -
 vector
 -
 
-/Users/rasimon/Documents/Tracer_Challenge/Test/catch.hpp
+/home/rasimon/workspace/Tracer-Challenge/Test/catch.hpp
 TargetConditionals.h
 -
 ciso646
@@ -274,7 +274,7 @@ string
 memory
 -
 Foundation/Foundation.h
-/Users/rasimon/Documents/Tracer_Challenge/Test/Foundation/Foundation.h
+/home/rasimon/workspace/Tracer-Challenge/Test/Foundation/Foundation.h
 algorithm
 -
 random
@@ -458,7 +458,15 @@ algorithm
 cassert
 -
 
-/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Matrix.h
+/home/rasimon/workspace/Tracer-Challenge/src/Primitives/Matrix.cpp
+Matrix.h
+/home/rasimon/workspace/Tracer-Challenge/src/Primitives/Matrix.h
+Tuple.h
+/home/rasimon/workspace/Tracer-Challenge/src/Primitives/Tuple.h
+cstring
+-
+
+/home/rasimon/workspace/Tracer-Challenge/src/Primitives/Matrix.h
 memory
 -
 vector
@@ -466,9 +474,9 @@ vector
 iostream
 -
 Tuple.h
-/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.h
+/home/rasimon/workspace/Tracer-Challenge/src/Primitives/Tuple.h
 
-/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.h
+/home/rasimon/workspace/Tracer-Challenge/src/Primitives/Tuple.h
 iostream
 -
 
