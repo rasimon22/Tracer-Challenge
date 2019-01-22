@@ -169,6 +169,88 @@ TEST_CASE("Matrix Determinants") {
     SECTION("2x2 Determinant") {
         REQUIRE(Primitives::Matrix::determinant(a) == 17);
     }
+    SECTION("Sub matrices"){
+        Primitives::Matrix b(3,3);
+        b.at(0, 0) = 1;
+        b.at(1, 0) = 5;
+        b.at(2, 0) = 6;
+
+        b.at(0, 1) = -3;
+        b.at(1, 1) = 2;
+        b.at(2, 1) = 6;
+
+        b.at(0, 2) = 6;
+        b.at(1, 2) = 6;
+        b.at(2, 2) = 6;
+        auto c = b.sub_matrix(2,2);
+        REQUIRE(c == a);
+    }
+    SECTION("Larger Submatricies"){
+        Primitives::Matrix l(4,4);
+        l.at(0,0) = -6;
+        l.at(1,0) = 1;
+        l.at(2,0) = 1;
+        l.at(3,0) = 6;
+
+
+        l.at(0,1) = -8;
+        l.at(1,1) = 5;
+        l.at(2,1) = 8;
+        l.at(3,1) = 6;
+
+        l.at(0,2) = -1;
+        l.at(1,2) = 0;
+        l.at(2,2) = 8;
+        l.at(3,2) = 2;
+
+        l.at(0,3) = -7;
+        l.at(1,3) = 1;
+        l.at(2,3) = -1;
+        l.at(3,3) = 1;
+
+        Primitives::Matrix res(3,3);
+        res.at(0,0) = -6;
+        res.at(1,0) = 1;
+        res.at(2,0) = 6;
+
+        res.at(0,1) = -8;
+        res.at(1,1) = 8;
+        res.at(2,1) = 6;
+
+        res.at(0,2) = -7;
+        res.at(1,2) = -1;
+        res.at(2,2) = 1;
+
+        REQUIRE(l.sub_matrix(2,1) == res);
+    }
+    Primitives::Matrix orig(3,3);
+
+    orig.at(0,0) = 3;
+    orig.at(1,0) = 5;
+    orig.at(2,0) = 0;
+
+    orig.at(0,1) = 2;
+    orig.at(1,1) = -1;
+    orig.at(2,1) = -7;
+
+    orig.at(0,2) = 6;
+    orig.at(1,2) = -1;
+    orig.at(2,2) = 5;
+    SECTION("Minor"){
+
+
+        Primitives::Matrix submat = orig.sub_matrix(1,0);
+
+        REQUIRE(Primitives::Matrix::determinant(submat) == 25);
+
+        REQUIRE(orig.matrix_minor(1,0) == 25);
+
+    }
+    SECTION("Cofactors"){
+        REQUIRE(orig.matrix_minor(0,0) == -12);
+        REQUIRE(orig.cofactor(0,0) == -12);
+        REQUIRE(orig.cofactor(1,0) == -25);
+    }
 }
 
 #endif

@@ -73,7 +73,7 @@ float Primitives::Matrix::calculateCell(size_t x, size_t y, Primitives::Matrix &
 
 void Primitives::Matrix::print(std::ostream &os) {
     for(size_t i = 0; i < height; ++i){
-        for(auto j = 0; j < width; ++j){
+        for(size_t j = 0; j < width; ++j){
             os << data[i * width + j] << ' ';
         }
         os << std::endl;
@@ -121,7 +121,32 @@ float Primitives::Matrix::determinant(Primitives::Matrix &mat) {
     }
 }
 
-Primitives::Matrix Primitives::Matrix::sub_matrix(Primitives::Matrix &mat, size_t row, size_t column) {
-    
+Primitives::Matrix Primitives::Matrix::sub_matrix(size_t row, size_t column) {
+    Primitives::Matrix m(this->width - 1, this->height - 1);
+    for(size_t r = 0; r < m.height; ++r){
+        for(size_t col = 0; col < m.width; ++col){
+            if(r < row && col < column){
+                m.at(col, r) = this->at(col, r);
+            }
+            if(r >= row || col >= column){
+                size_t x_coord, y_coord;
+
+                r >= row ? y_coord = r + 1 : y_coord = r;
+                col >= column ? x_coord = col + 1 : x_coord = col;
+                m.at(col, r) = this->at(x_coord, y_coord);
+            }
+        }
+    }
+    return m;
+}
+
+float Primitives::Matrix::matrix_minor(size_t x, size_t y) {
+    Matrix m(this->sub_matrix(x,y));
+    return determinant(m);
 
 }
+
+float Primitives::Matrix::cofactor(size_t, size_t) {
+
+}
+

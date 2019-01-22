@@ -26,7 +26,9 @@ namespace Primitives {
         static Matrix identity_matrix();
         Matrix transpose();
         static float determinant(Matrix&);
-        static Matrix sub_matrix(Matrix&, size_t, size_t);
+        Matrix sub_matrix(size_t, size_t);
+        float matrix_minor(size_t, size_t);
+        float cofactor(size_t, size_t);
 
 
     private:
