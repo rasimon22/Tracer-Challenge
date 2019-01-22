@@ -146,7 +146,9 @@ float Primitives::Matrix::matrix_minor(size_t x, size_t y) {
 
 }
 
-float Primitives::Matrix::cofactor(size_t, size_t) {
-
+float Primitives::Matrix::cofactor(size_t x, size_t y) {
+    float ret;
+    x + y % 2 == 0 ? ret = this->matrix_minor(x, y) : ret = 0 - this->matrix_minor(x,y);
+    return ret;
 }
 

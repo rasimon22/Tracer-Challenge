@@ -13,9 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="12ded6ad-993c-4bd1-8c0c-ed9e6fcbd87e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/MatrixTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MatrixTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Tracer_Challenge" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Tracer_Challenge" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Primitives/Matrix.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primitives/Matrix.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Primitives/Matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primitives/Matrix.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Primitives/Matrix.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="144" column="25" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+            <state relative-caret-position="730">
+              <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
               <folding>
                 <element signature="e#47#66#0" expanded="true" />
               </folding>
@@ -84,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/MatrixTest.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="685">
-              <caret line="249" column="42" selection-start-line="249" selection-start-column="42" selection-end-line="249" selection-end-column="42" />
+            <state relative-caret-position="715">
+              <caret line="251" column="43" selection-start-line="251" selection-start-column="43" selection-end-line="251" selection-end-column="43" />
               <folding>
                 <element signature="e#55#75#0" expanded="true" />
               </folding>
@@ -129,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Primitives/Matrix.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+            <state relative-caret-position="450">
+              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
               <folding>
                 <element signature="e#116#133#0" expanded="true" />
               </folding>
@@ -166,9 +166,9 @@
         <option value="$PROJECT_DIR$/src/Simulation/Projectile.cpp" />
         <option value="$PROJECT_DIR$/src/Simulation/Environment.cpp" />
         <option value="$PROJECT_DIR$/src/Primitives/Tuple.cpp" />
+        <option value="$PROJECT_DIR$/Test/MatrixTest.cpp" />
         <option value="$PROJECT_DIR$/src/Primitives/Matrix.h" />
         <option value="$PROJECT_DIR$/src/Primitives/Matrix.cpp" />
-        <option value="$PROJECT_DIR$/Test/MatrixTest.cpp" />
       </list>
     </option>
   </component>
@@ -296,7 +296,7 @@
       <workItem from="1547683409038" duration="11421000" />
       <workItem from="1547757561535" duration="1761000" />
       <workItem from="1547920217279" duration="4844000" />
-      <workItem from="1548096267211" duration="8917000" />
+      <workItem from="1548096267211" duration="10059000" />
     </task>
     <task id="LOCAL-00001" summary="Added tuple magnitude calculation">
       <created>1545126574798</created>
@@ -375,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547936460941</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Submatrix and matrix_minor tests passing">
+      <created>1548127057998</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1548127057998</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -411,7 +418,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78554000" />
+    <option name="totallyTimeSpent" value="79696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="2493" height="1413" extended-state="7" />
@@ -476,7 +483,8 @@
     <MESSAGE value="Matrix multiplication by matrix passes" />
     <MESSAGE value="Matrix Multiplication with tuples and identity matrix passing" />
     <MESSAGE value="Matrix 2x2 determinant passing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Matrix 2x2 determinant passing" />
+    <MESSAGE value="Submatrix and matrix_minor tests passing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Submatrix and matrix_minor tests passing" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -682,30 +690,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Primitives/Matrix.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        <state relative-caret-position="450">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
           <folding>
             <element signature="e#116#133#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primitives/Matrix.cpp">
+    <entry file="file://$PROJECT_DIR$/Test/MatrixTest.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="144" column="25" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+        <state relative-caret-position="715">
+          <caret line="251" column="43" selection-start-line="251" selection-start-column="43" selection-end-line="251" selection-end-column="43" />
           <folding>
-            <element signature="e#47#66#0" expanded="true" />
+            <element signature="e#55#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/MatrixTest.cpp">
+    <entry file="file://$PROJECT_DIR$/src/Primitives/Matrix.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="249" column="42" selection-start-line="249" selection-start-column="42" selection-end-line="249" selection-end-column="42" />
+        <state relative-caret-position="730">
+          <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
           <folding>
-            <element signature="e#55#75#0" expanded="true" />
+            <element signature="e#47#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
