@@ -33,6 +33,18 @@ TEST_CASE("Matrix Construction"){
     }
 }
 
+TEST_CASE("Construction From const array of floats"){
+    float dat[16];
+    for(auto i = 0; i < 16; ++i){
+        dat[i] = i;
+    }
+    Primitives::Matrix constM(dat, 4, 4);
+
+    REQUIRE(constM.at(0,0) == 0);
+    REQUIRE(constM.at(3,3) == 15);
+
+}
+
 TEST_CASE("Matrix Equality"){
     Primitives::Matrix m1;
     Primitives::Matrix m2;
@@ -166,6 +178,28 @@ TEST_CASE("Matrix Determinants") {
     a.at(1, 0) = 5;
     a.at(0, 1) = -3;
     a.at(1, 1) = 2;
+
+    Primitives::Matrix l(4,4);
+    l.at(0,0) = -6;
+    l.at(1,0) = 1;
+    l.at(2,0) = 1;
+    l.at(3,0) = 6;
+
+    l.at(0,1) = -8;
+    l.at(1,1) = 5;
+    l.at(2,1) = 8;
+    l.at(3,1) = 6;
+
+    l.at(0,2) = -1;
+    l.at(1,2) = 0;
+    l.at(2,2) = 8;
+    l.at(3,2) = 2;
+
+    l.at(0,3) = -7;
+    l.at(1,3) = 1;
+    l.at(2,3) = -1;
+    l.at(3,3) = 1;
+
     SECTION("2x2 Determinant") {
         REQUIRE(Primitives::Matrix::determinant(a) == 17);
     }
@@ -186,27 +220,6 @@ TEST_CASE("Matrix Determinants") {
         REQUIRE(c == a);
     }
     SECTION("Larger Submatricies"){
-        Primitives::Matrix l(4,4);
-        l.at(0,0) = -6;
-        l.at(1,0) = 1;
-        l.at(2,0) = 1;
-        l.at(3,0) = 6;
-
-
-        l.at(0,1) = -8;
-        l.at(1,1) = 5;
-        l.at(2,1) = 8;
-        l.at(3,1) = 6;
-
-        l.at(0,2) = -1;
-        l.at(1,2) = 0;
-        l.at(2,2) = 8;
-        l.at(3,2) = 2;
-
-        l.at(0,3) = -7;
-        l.at(1,3) = 1;
-        l.at(2,3) = -1;
-        l.at(3,3) = 1;
 
         Primitives::Matrix res(3,3);
         res.at(0,0) = -6;
@@ -250,6 +263,27 @@ TEST_CASE("Matrix Determinants") {
         REQUIRE(orig.matrix_minor(0,0) == -12);
         REQUIRE(orig.cofactor(0,0) == -12);
         REQUIRE(orig.cofactor(1,0) == -25);
+    }
+    SECTION("Larger Determinants") {
+        float dat3[9] = {1, 2, 6,
+                         -5, 8, -4,
+                         2, 6, 4};
+        Primitives::Matrix m3(dat3,3,3);
+
+        REQUIRE(m3.cofactor(0,0) == 56);
+        REQUIRE(m3.cofactor(0,1) == 12);
+        REQUIRE(m3.cofactor(0,2) == -46);
+        //REQUIRE(Primitives::Matrix::determinant(m3) == 196);
+
+        float data[16] = {-2, -8, -3, 5,
+                          -3, 1, 7, 3,
+                          1 ,2 -9, 6,
+                          -6, 7, 7, -9};
+        Primitives::Matrix m4(data,4,4);
+
+        //REQUIRE(m4.cofactor(0,0) == 690);
+
+
     }
 }
 

@@ -18,6 +18,13 @@ Primitives::Matrix::Matrix(size_t height, size_t width): width(width), height(he
                                                          data(std::make_unique<float[]>(width*height)){
 }
 
+Primitives::Matrix::Matrix(const float *in, size_t x, size_t y):width(x), height(y),
+data(std::make_unique<float[]>(x * y)) {
+    for(auto i = 0; i < x * y; ++i){
+        data[i] = in[i];
+    }
+}
+
 //TODO:Refactor initialization out of I-list into self assignment check
 Primitives::Matrix::Matrix(const Primitives::Matrix& rhs):width(rhs.width), height(rhs.height),
                                                           data(std::make_unique<float[]>(rhs.width*rhs.height)){
@@ -150,5 +157,10 @@ float Primitives::Matrix::cofactor(size_t x, size_t y) {
     float ret;
     x + y % 2 == 0 ? ret = this->matrix_minor(x, y) : ret = 0 - this->matrix_minor(x,y);
     return ret;
+}
+
+std::ostream &Primitives::operator<<(std::ostream& os, Primitives::Matrix& rhs) {
+    rhs.print(os);
+    return os;
 }
 

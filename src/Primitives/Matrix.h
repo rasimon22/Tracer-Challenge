@@ -17,6 +17,7 @@ namespace Primitives {
         Matrix(size_t, size_t);
         Matrix(const Matrix&);
         Matrix(std::vector<float>, size_t, size_t);
+        Matrix(const float*, size_t, size_t);
         Matrix(Primitives::Tuple&);
         float& at(size_t, size_t);
         bool operator==(const Matrix&) const;
@@ -29,6 +30,7 @@ namespace Primitives {
         Matrix sub_matrix(size_t, size_t);
         float matrix_minor(size_t, size_t);
         float cofactor(size_t, size_t);
+        friend std::ostream& operator<<(std::ostream&, Matrix&);
 
 
     private:

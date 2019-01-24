@@ -4,18 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/rasimon/workspace/Tracer-Challenge/Test/CanvasTest.cpp" "/home/rasimon/workspace/Tracer-Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o"
-  "/home/rasimon/workspace/Tracer-Challenge/Test/MatrixTest.cpp" "/home/rasimon/workspace/Tracer-Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.o"
-  "/home/rasimon/workspace/Tracer-Challenge/Test/TupleTest.cpp" "/home/rasimon/workspace/Tracer-Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o"
-  "/home/rasimon/workspace/Tracer-Challenge/main.cpp" "/home/rasimon/workspace/Tracer-Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/main.cpp.o"
-  "/home/rasimon/workspace/Tracer-Challenge/src/Primitives/Matrix.cpp" "/home/rasimon/workspace/Tracer-Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Primitives/Matrix.cpp.o"
-  "/home/rasimon/workspace/Tracer-Challenge/src/Primitives/Tuple.cpp" "/home/rasimon/workspace/Tracer-Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o"
-  "/home/rasimon/workspace/Tracer-Challenge/src/Render/Canvas.cpp" "/home/rasimon/workspace/Tracer-Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o"
-  "/home/rasimon/workspace/Tracer-Challenge/src/Render/Color.cpp" "/home/rasimon/workspace/Tracer-Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.o"
-  "/home/rasimon/workspace/Tracer-Challenge/src/Simulation/Environment.cpp" "/home/rasimon/workspace/Tracer-Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Simulation/Environment.cpp.o"
-  "/home/rasimon/workspace/Tracer-Challenge/src/Simulation/Projectile.cpp" "/home/rasimon/workspace/Tracer-Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Simulation/Projectile.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/Test/CanvasTest.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/Test/MatrixTest.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/Test/TupleTest.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/main.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/main.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Matrix.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Primitives/Matrix.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/src/Primitives/Tuple.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/src/Render/Canvas.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Render/Canvas.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/src/Render/Color.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Render/Color.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/src/Simulation/Environment.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Simulation/Environment.cpp.o"
+  "/Users/rasimon/Documents/Tracer_Challenge/src/Simulation/Projectile.cpp" "/Users/rasimon/Documents/Tracer_Challenge/cmake-build-debug/CMakeFiles/Tracer_Challenge.dir/src/Simulation/Projectile.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
