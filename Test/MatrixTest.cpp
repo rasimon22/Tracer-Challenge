@@ -274,7 +274,7 @@ TEST_CASE("Matrix Determinants") {
         REQUIRE(m3.cofactor(0,1) == 12);
         REQUIRE(m3.cofactor(0,2) == -46);
         REQUIRE(Primitives::Matrix::determinant(m3) == -196);
-        float data[16] = {-2, -8, -3, 5,
+        float data[16] = {-2, -8, 3, 5,
                           -3, 1, 7, 3,
                           1 ,2, -9, 6,
                           -6, 7, 7, -9};
