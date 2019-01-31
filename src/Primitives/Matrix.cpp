@@ -121,10 +121,16 @@ Primitives::Matrix Primitives::Matrix::transpose() {
 }
 
 float Primitives::Matrix::determinant(Primitives::Matrix &mat) {
+    std::cout << "DETERMINATE CALL STARTS HERE" << mat.width << std::endl;
     if(mat.width == 2 && mat.height == 2){
         return mat.at(0,0) * mat.at(1,1) - mat.at(1,0) * mat.at(0,1);
     } else {
-        throw "Matrix too large to find determinant";
+        float det = 0;
+        for(auto i = 0; i < mat.width; ++i) {
+            det += mat.at(i,0) * mat.cofactor(0,i);
+            std::cout << "DET = " << det << std::endl;
+        }
+        return det;
     }
 }
 
@@ -149,13 +155,15 @@ Primitives::Matrix Primitives::Matrix::sub_matrix(size_t row, size_t column) {
 
 float Primitives::Matrix::matrix_minor(size_t x, size_t y) {
     Matrix m(this->sub_matrix(x,y));
+    std::cout<< *this << "matrix minor \n" << m << '\n' << determinant(m) << std::endl;
     return determinant(m);
-
 }
 
 float Primitives::Matrix::cofactor(size_t x, size_t y) {
     float ret;
-    x + y % 2 == 0 ? ret = this->matrix_minor(x, y) : ret = 0 - this->matrix_minor(x,y);
+    std::cout << "COFACTOR CALL ON :\n" << *this << std::endl;
+    (x + y) % 2 == 0 ? ret = this->matrix_minor(x, y) : ret = (0 - this->matrix_minor(x,y));
+    std::cout << "cofactor = " << ret << "\n";
     return ret;
 }
 

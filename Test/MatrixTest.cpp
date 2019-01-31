@@ -273,15 +273,17 @@ TEST_CASE("Matrix Determinants") {
         REQUIRE(m3.cofactor(0,0) == 56);
         REQUIRE(m3.cofactor(0,1) == 12);
         REQUIRE(m3.cofactor(0,2) == -46);
-        //REQUIRE(Primitives::Matrix::determinant(m3) == 196);
-
+        REQUIRE(Primitives::Matrix::determinant(m3) == -196);
         float data[16] = {-2, -8, -3, 5,
                           -3, 1, 7, 3,
-                          1 ,2 -9, 6,
+                          1 ,2, -9, 6,
                           -6, 7, 7, -9};
         Primitives::Matrix m4(data,4,4);
-
-        //REQUIRE(m4.cofactor(0,0) == 690);
+        REQUIRE(m4.cofactor(0,0) == 690);
+        REQUIRE(m4.cofactor(0,1) == 447);
+        REQUIRE(m4.cofactor(0,2) == 210);
+        REQUIRE(m4.cofactor(0,3) == 51);
+        REQUIRE(Primitives::Matrix::determinant(m4) == -4071);
 
 
     }
