@@ -16,6 +16,7 @@ namespace Primitives {
         Matrix();
         Matrix(size_t, size_t);
         Matrix(const Matrix&);
+        Matrix(Matrix&&);
         Matrix(std::vector<float>, size_t, size_t);
         Matrix(const float*, size_t, size_t);
         Matrix(Primitives::Tuple&);
@@ -31,6 +32,10 @@ namespace Primitives {
         float matrix_minor(size_t, size_t);
         float cofactor(size_t, size_t);
         friend std::ostream& operator<<(std::ostream&, Matrix&);
+        bool is_invertable();
+        Matrix invert();
+        Matrix& operator=(Matrix&&);
+
 
 
     private:

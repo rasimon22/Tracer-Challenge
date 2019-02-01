@@ -285,8 +285,59 @@ TEST_CASE("Matrix Determinants") {
         REQUIRE(m4.cofactor(0,3) == 51);
         REQUIRE(Primitives::Matrix::determinant(m4) == -4071);
 
+    }
+}
+
+TEST_CASE("Matrix Inversion"){
+    SECTION("Matrix Is Invertable"){
+        Primitives::Matrix m1({ 6, 4, 4, 4,
+                                5, 5, 7, 6,
+                                4, -9, 3, -7,
+                                9, 1, 7, -6}, 4, 4);
+        REQUIRE(m1.is_invertable());
+
+        Primitives::Matrix m2({ -4, 2, -2, -3,
+                                9, 6, 2, 6,
+                                0, -5, 1, -5,
+                                0, 0, 0, 0}, 4, 4);
+        REQUIRE_FALSE(m2.is_invertable());
+    };
+
+    SECTION("Invert Matrix Tests"){
+        Primitives::Matrix a({-5, 2, 6, -8,
+                              1, -5, 1, 8,
+                              7, 7, -6, -7,
+                              1, -3, 7, 4}, 4, 4);
+        Primitives::Matrix b(a.invert());
+        REQUIRE(Primitives::Matrix::determinant(a) == 532);
+        REQUIRE(a.cofactor(2, 3) == -160);
+        REQUIRE(Primitives::float_equal(b.at(2, 3), -0.30075f));
+        REQUIRE(a.cofactor(3, 2) == 105);
+        REQUIRE(Primitives::float_equal(b.at(3, 2), 0.19737f));
+        Primitives::Matrix testMat({0.218045, 0.451128, 0.240602, -0.0451128,
+                                    -0.808271, -1.45677, -0.443609, 0.520677,
+                                    -0.0789474, -0.223684, -0.0526316, 0.197368,
+                                    -0.522556, -0.81391, -0.300752, 0.306391}, 4,4);
+        REQUIRE(b == testMat);
+    };
+
+    SECTION("Multiply by inverse matrices"){
+        Primitives::Matrix _a({3, -9, 7, 3,
+                            3, -8 , 2, -9,
+                            -4, 4, 4, 1,
+                            -6, 5, -1, 1}, 4, 4);
+        Primitives::Matrix _b({8, 2, 2, 2,
+                               3, -1, 7, 0,
+                               7, 0, 5, 4,
+                               6, -2, 0, 5}, 4, 4);
+
+        Primitives::Matrix _c( _a*_b);
+        Primitives::Matrix _inv(_b.invert());
+
+        REQUIRE(_c *_inv == _a);
 
     }
+
 }
 
 #endif

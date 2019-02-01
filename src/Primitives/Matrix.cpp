@@ -42,12 +42,17 @@ Primitives::Matrix::Matrix(std::vector<float> vec, size_t width, size_t height):
     }
 }
 
+Primitives::Matrix::Matrix(Primitives::Matrix &&rhs):width(std::move(rhs.width)), height(std::move(rhs.height)),
+data(std::move(rhs.data)){
+
+}
+
 bool Primitives::Matrix::operator==(const Primitives::Matrix& rhs) const{
     if(height == rhs.height && width == rhs.width){
         float* l_ptr = &data[0];
         float* r_ptr = &rhs.data[0];
         for(size_t i = 0; i < width * height; ++i){
-            if(*l_ptr != * r_ptr) return false;
+            if(!Primitives::float_equal(*l_ptr, * r_ptr)) return false;
             ++l_ptr;
             ++r_ptr;
         }
@@ -128,8 +133,6 @@ float Primitives::Matrix::determinant(Primitives::Matrix &mat) {
         for(size_t i = 0; i < mat.width; ++i) {
             det += mat.at(i,0) * mat.cofactor(0,i);
 
-            if(mat.width == 4) std::cout << "det incremented on matrix of 4\n" << "det incremented by" <<
-            mat.at(i,0) * mat.cofactor(0,i) << '\n';
         }
         return det;
 }
@@ -168,4 +171,37 @@ std::ostream &Primitives::operator<<(std::ostream& os, Primitives::Matrix& rhs) 
     rhs.print(os);
     return os;
 }
+
+bool Primitives::Matrix::is_invertable() {
+    return Matrix::determinant(*this) != 0;
+}
+
+Primitives::Matrix Primitives::Matrix::invert() {
+    Matrix inverted(4,4);
+
+    for(auto rows = 0; rows < this -> height; ++rows){
+        for(auto columns = 0; columns < this -> width; ++columns){
+            inverted.at(columns, rows) = this -> cofactor(columns, rows);
+        }
+    }
+
+    float det = Matrix::determinant(*this);
+
+    for(auto rows = 0; rows < this -> height; ++rows){
+        for(auto columns = 0; columns < this -> height; ++columns){
+            inverted.at(columns,rows) /= det;
+        }
+    }
+
+    return inverted;
+}
+
+Primitives::Matrix &Primitives::Matrix::operator=(Primitives::Matrix &&rhs) {
+    width = std::move(rhs.width);
+    height = std::move(rhs.height);
+    data = std::move(rhs.data);
+}
+
+
+
 
