@@ -12,6 +12,11 @@ CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.o: ../Test/catch.hpp
 CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.o: ../src/Primitives/Matrix.h
 CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.o: ../src/Primitives/Tuple.h
 
+CMakeFiles/Tracer_Challenge.dir/Test/TransformationTest.cpp.o: ../Test/TransformationTest.cpp
+CMakeFiles/Tracer_Challenge.dir/Test/TransformationTest.cpp.o: ../Test/catch.hpp
+CMakeFiles/Tracer_Challenge.dir/Test/TransformationTest.cpp.o: ../src/Primitives/Matrix.h
+CMakeFiles/Tracer_Challenge.dir/Test/TransformationTest.cpp.o: ../src/Primitives/Tuple.h
+
 CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o: ../Test/TupleTest.cpp
 CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o: ../Test/catch.hpp
 CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o: ../src/Primitives/Tuple.h

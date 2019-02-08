@@ -68,6 +68,4 @@ TEST_CASE("Writing Pixel to Canvas")
     REQUIRE(c1.at(2,3) == Render::Color(255.0f, 255.0f, 100.0f));
 }
 
-
-
 #endif

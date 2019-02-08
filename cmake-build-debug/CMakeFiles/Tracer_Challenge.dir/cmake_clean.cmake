@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Tracer_Challenge.dir/Test/TupleTest.cpp.o"
   "CMakeFiles/Tracer_Challenge.dir/Test/CanvasTest.cpp.o"
   "CMakeFiles/Tracer_Challenge.dir/Test/MatrixTest.cpp.o"
+  "CMakeFiles/Tracer_Challenge.dir/Test/TransformationTest.cpp.o"
   "CMakeFiles/Tracer_Challenge.dir/src/Primitives/Tuple.cpp.o"
   "CMakeFiles/Tracer_Challenge.dir/src/Primitives/Matrix.cpp.o"
   "CMakeFiles/Tracer_Challenge.dir/src/Simulation/Environment.cpp.o"

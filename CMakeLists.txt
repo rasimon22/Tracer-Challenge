@@ -3,7 +3,7 @@ project(Tracer_Challenge)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(TEST Test/catch.hpp Test/TupleTest.cpp Test/CanvasTest.cpp Test/MatrixTest.cpp)
+set(TEST Test/catch.hpp Test/TupleTest.cpp Test/CanvasTest.cpp Test/MatrixTest.cpp Test/TransformationTest.cpp)
 
 set(PRIMITIVES src/Primitives/Tuple.h src/Primitives/Tuple.cpp src/Primitives/Matrix.cpp src/Primitives/Matrix.h)
 

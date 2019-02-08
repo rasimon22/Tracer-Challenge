@@ -23,9 +23,11 @@ namespace Primitives {
         float& at(size_t, size_t);
         bool operator==(const Matrix&) const;
         Matrix operator*(Matrix&);
-        Matrix operator*(Primitives::Tuple&);
+        Tuple operator*(Primitives::Tuple&);
         void print(std::ostream&);
         static Matrix identity_matrix();
+        static Matrix translate(float, float, float);
+        static Matrix scale(float, float, float);
         Matrix transpose();
         static float determinant(Matrix&);
         Matrix sub_matrix(size_t, size_t);

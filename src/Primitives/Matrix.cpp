@@ -102,9 +102,17 @@ Primitives::Matrix::Matrix(Primitives::Tuple &rhs): height(4), width(1){
 
 }
 
-Primitives::Matrix Primitives::Matrix::operator*(Primitives::Tuple &rhs) {
-    Matrix m(rhs);
-    return *this * m;
+Primitives::Tuple Primitives::Matrix::operator*(Primitives::Tuple &rhs) {
+    //TODO: Refactor String Throw into Exception Type
+    float res[4];
+    if(this->width != 4 || this->height != 4) throw "Dimension Mismatch";
+    for(size_t i = 0; i < 4; ++i) {
+        res[i] = this->at(0, i) * rhs.x +
+                 this->at(1, i) * rhs.y +
+                 this->at(2, i) * rhs.z +
+                 this->at(3,i) * rhs.w;
+    }
+    return Tuple(res[0], res[1], res[2], res[3]);
 }
 
 Primitives::Matrix Primitives::Matrix::identity_matrix() {
@@ -202,6 +210,18 @@ Primitives::Matrix &Primitives::Matrix::operator=(Primitives::Matrix &&rhs) {
     data = std::move(rhs.data);
 }
 
+Primitives::Matrix Primitives::Matrix::translate(float x, float y, float z) {
+    auto m = Primitives::Matrix::identity_matrix();
+    m.at(3,0) = x;
+    m.at(3,1) = y;
+    m.at(3,2) = z;
+    return m;
+}
 
-
-
+Primitives::Matrix Primitives::Matrix::scale(float x, float y, float z) {
+    auto m = Primitives::Matrix::identity_matrix();
+    m.at(0,0) = x;
+    m.at(1,1) = y;
+    m.at(2,2) = z;
+    return m;
+}

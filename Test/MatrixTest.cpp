@@ -108,11 +108,8 @@ TEST_CASE("Matrix Multiplication by Tuple") {
     m1.at(2,3) = 0;
     m1.at(3,3) = 1;
 
-    Primitives::Matrix result(4,1);
-    result.at(0,0) = 18;
-    result.at(1,0) = 24;
-    result.at(2,0) = 33;
-    result.at(3,0) = 1;
+
+    Primitives::Tuple result(18, 24, 33, 1);
 
     REQUIRE(m1 * t1 == result);
 
@@ -120,7 +117,7 @@ TEST_CASE("Matrix Multiplication by Tuple") {
 
 TEST_CASE("Identity Matrix"){
     Primitives::Tuple t1(1,2,3,1);
-    REQUIRE(Primitives::Matrix::identity_matrix() * t1 == static_cast<Primitives::Matrix>(t1));
+    REQUIRE(Primitives::Matrix::identity_matrix() * t1 == t1);
 }
 
 TEST_CASE("Matrix Transposition"){
@@ -335,9 +332,7 @@ TEST_CASE("Matrix Inversion"){
         Primitives::Matrix _inv(_b.invert());
 
         REQUIRE(_c *_inv == _a);
-
     }
-
 }
 
 #endif
