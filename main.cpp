@@ -7,11 +7,11 @@
 
 #else
 #include <iostream>
-#include "src/Simulation/Environment.h"
-#include "src/Simulation/Projectile.h"
-#include "src/Primitives/Tuple.h"
-#include "src/Render/Canvas.h"
-#include "src/Render/Color.h"
+#include "src/Simulation/Include/Environment.h"
+#include "src/Simulation/Include/Projectile.h"
+#include "src/Primitives/Include/Tuple.h"
+#include "src/Render/Include/Canvas.h"
+#include "src/Render/Include/Color.h"
 
 int main() {
     Simulation::Projectile proj(Primitives::point(0, 1, 0), Primitives::vector(5, 5, 0));

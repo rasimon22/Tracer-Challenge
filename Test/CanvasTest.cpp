@@ -6,8 +6,8 @@
 
 #include "catch.hpp"
 #include <cmath>
-#include "../src/Render/Color.h"
-#include "../src/Render/Canvas.h"
+#include "../src/Render/Include/Color.h"
+#include "../src/Render/Include/Canvas.h"
 #include <iostream>
 
 TEST_CASE("Colors are RGB tuples")

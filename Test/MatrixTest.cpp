@@ -6,8 +6,8 @@
 #if 1
 
 #include "catch.hpp"
-#include "../src/Primitives/Tuple.h"
-#include "../src/Primitives/Matrix.h"
+#include "../src/Primitives/Include/Tuple.h"
+#include "../src/Primitives/Include/Matrix.h"
 #include <iostream>
 #include <vector>
 TEST_CASE("Constructors"){

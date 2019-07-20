@@ -3,8 +3,8 @@
 //
 
 #include "catch.hpp"
-#include "../src/Primitives/Matrix.h"
-#include "../src/Primitives/Tuple.h"
+#include "../src/Primitives/Include/Matrix.h"
+#include "../src/Primitives/Include/Tuple.h"
 
 TEST_CASE("Matrix Translation of A Tuple") {
     auto m = Primitives::Matrix::translate(5, -3, 2);

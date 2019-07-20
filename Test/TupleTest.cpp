@@ -5,7 +5,7 @@
 
 #include "catch.hpp"
 #include <cmath>
-#include "../src/Primitives/Tuple.h"
+#include "../src/Primitives/Include/Tuple.h"
 
 
 TEST_CASE("A tuple with w=1.0 is a point")
