@@ -75,9 +75,9 @@ Primitives::Tuple Primitives::Tuple::operator/(const float &scalar) {
 
 double Primitives::Tuple::magnitude() {
     double sum = pow(this -> x, 2.0) +
-                pow(this -> y, 2.0) +
-                pow(this -> z, 2.0) +
-                pow(this -> w, 2.0);
+                 pow(this -> y, 2.0) +
+                 pow(this -> z, 2.0) +
+                 pow(this -> w, 2.0);
     return sqrt(sum);
 
 }
@@ -135,7 +135,7 @@ Primitives::Tuple Primitives::point(const Primitives::Tuple &tup) //TODO: write 
 }
 
 bool Primitives::float_equal(float a, float b) {
-    return fabs(a - b) <= fabs(.001 * a);
+    return (round(fabs(a - b) * 1000.0)/ 1000.0) <= fabs(.0001 * a);
 }
 
 std::ostream& Primitives::operator<<(std::ostream &os, const Primitives::Tuple &rhs) {

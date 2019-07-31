@@ -10,6 +10,11 @@
 #include "../src/Primitives/Include/Matrix.h"
 #include <iostream>
 #include <vector>
+#include <exception>
+#include <cmath>
+
+#define PI 3.141592634
+
 TEST_CASE("Constructors"){
     Primitives::Matrix m;
     m.at(1,1) = 4.0f;
@@ -54,60 +59,27 @@ TEST_CASE("Matrix Equality"){
 }
 
 TEST_CASE("Matrix Multiplication"){
-    Primitives::Matrix m1(2, 2);
-    Primitives::Matrix m2(2, 2);
-    m1.at(0,0) = 1.0f;
-    m1.at(1,0) = 2.0f;
-    m1.at(0,1) = 3.0f;
-    m1.at(1,1) = 4.0f;
-
-    m2.at(0,0) = 2.0f;
-    m2.at(1,0) = 0.0f;
-    m2.at(0,1) = 1.0f;
-    m2.at(1,1) = 2.0f;
-
-    Primitives::Matrix result(2, 2);
-    result.at(0,0) = 4.0f;
-    result.at(1,0) = 4.0f;
-    result.at(0,1) = 10.0f;
-    result.at(1,1) = 8.0f;
+    Primitives::Matrix m1({1.0f, 2.0f,
+                           3.0f, 4.0f}, 2, 2);
+    Primitives::Matrix m2({2.0f, 0.0f,
+                           1.0f, 2.0f}, 2, 2);
+    Primitives::Matrix result({4.0f, 4.0f,
+                               10.0f, 8.0f},2, 2);
     REQUIRE(m1 * m2 == result);
     Primitives::Matrix fail1(3,3);
     Primitives::Matrix fail2(4,4);
 
-    //try catch to test for mismatched dimension exceptions
-    try{
-        fail1 * fail2;
-        REQUIRE(false);
-    } catch(...) {
-        REQUIRE(true);
-    }
+//    try catch to test for mismatched dimension exceptions
+
+        REQUIRE_THROWS(fail1*fail2);
 }
 
 TEST_CASE("Matrix Multiplication by Tuple") {
-    Primitives::Matrix m1(4,4);
+    Primitives::Matrix m1({1, 2, 3, 4,
+                           2, 4, 4, 2,
+                           8, 6, 4, 1,
+                           0, 0, 0, 1}, 4,4);
     Primitives::Tuple t1(1,2,3,1);
-
-    m1.at(0,0) = 1;
-    m1.at(1,0) = 2;
-    m1.at(2,0) = 3;
-    m1.at(3,0) = 4;
-
-    m1.at(0,1) = 2;
-    m1.at(1,1) = 4;
-    m1.at(2,1) = 4;
-    m1.at(3,1) = 2;
-
-    m1.at(0,2) = 8;
-    m1.at(1,2) = 6;
-    m1.at(2,2) = 4;
-    m1.at(3,2) = 1;
-
-    m1.at(0,3) = 0;
-    m1.at(1,3) = 0;
-    m1.at(2,3) = 0;
-    m1.at(3,3) = 1;
-
 
     Primitives::Tuple result(18, 24, 33, 1);
 
@@ -123,129 +95,48 @@ TEST_CASE("Identity Matrix"){
 TEST_CASE("Matrix Transposition"){
     REQUIRE(Primitives::Matrix::identity_matrix().transpose() == Primitives::Matrix::identity_matrix());
 
-    Primitives::Matrix a(4,4);
-    Primitives::Matrix b(4,4);
+    Primitives::Matrix a({0, 9, 3, 0,
+                          9, 8, 0, 8,
+                          1, 8, 5, 3,
+                          0, 0, 5, 8}, 4, 4);
 
-    a.at(0,0) = 0;
-    a.at(1,0) = 9;
-    a.at(2,0) = 3;
-    a.at(3,0) = 0;
-
-    a.at(0,1) = 9;
-    a.at(1,1) = 8;
-    a.at(2,1) = 0;
-    a.at(3,1) = 8;
-
-    a.at(0,2) = 1;
-    a.at(1,2) = 8;
-    a.at(2,2) = 5;
-    a.at(3,2) = 3;
-
-    a.at(0,3) = 0;
-    a.at(1,3) = 0;
-    a.at(2,3) = 5;
-    a.at(3,3) = 8;
-
-    b.at(0,0) = 0;
-    b.at(1,0) = 9;
-    b.at(2,0) = 1;
-    b.at(3,0) = 0;
-
-    b.at(0,1) = 9;
-    b.at(1,1) = 8;
-    b.at(2,1) = 8;
-    b.at(3,1) = 0;
-
-    b.at(0,2) = 3;
-    b.at(1,2) = 0;
-    b.at(2,2) = 5;
-    b.at(3,2) = 5;
-
-    b.at(0,3) = 0;
-    b.at(1,3) = 8;
-    b.at(2,3) = 3;
-    b.at(3,3) = 8;
+    Primitives::Matrix b({0, 9, 1, 0,
+                          9, 8, 8, 0,
+                          3, 0, 5, 5,
+                          0, 8, 3, 8}, 4, 4);
 
     REQUIRE(a.transpose() == b);
 }
 
 TEST_CASE("Matrix Determinants") {
-    Primitives::Matrix a(2,2);
-    a.at(0, 0) = 1;
-    a.at(1, 0) = 5;
-    a.at(0, 1) = -3;
-    a.at(1, 1) = 2;
+    Primitives::Matrix a({1, 5,
+                          -3, 2}, 2, 2);
 
-    Primitives::Matrix l(4,4);
-    l.at(0,0) = -6;
-    l.at(1,0) = 1;
-    l.at(2,0) = 1;
-    l.at(3,0) = 6;
-
-    l.at(0,1) = -8;
-    l.at(1,1) = 5;
-    l.at(2,1) = 8;
-    l.at(3,1) = 6;
-
-    l.at(0,2) = -1;
-    l.at(1,2) = 0;
-    l.at(2,2) = 8;
-    l.at(3,2) = 2;
-
-    l.at(0,3) = -7;
-    l.at(1,3) = 1;
-    l.at(2,3) = -1;
-    l.at(3,3) = 1;
+    Primitives::Matrix l({-6, 1, 1, 6,
+                          -8, 5, 8, 6,
+                          -1, 0, 8, 2,
+                          -7, 1, -1, 1}, 4, 4);
 
     SECTION("2x2 Determinant") {
         REQUIRE(Primitives::Matrix::determinant(a) == 17);
     }
     SECTION("Sub matrices"){
-        Primitives::Matrix b(3,3);
-        b.at(0, 0) = 1;
-        b.at(1, 0) = 5;
-        b.at(2, 0) = 6;
-
-        b.at(0, 1) = -3;
-        b.at(1, 1) = 2;
-        b.at(2, 1) = 6;
-
-        b.at(0, 2) = 6;
-        b.at(1, 2) = 6;
-        b.at(2, 2) = 6;
+        Primitives::Matrix b({1, 5, 6,
+                              -3, 2, 6,
+                              6, 6 ,6}, 3, 3);
         auto c = b.sub_matrix(2,2);
         REQUIRE(c == a);
     }
     SECTION("Larger Submatricies"){
 
-        Primitives::Matrix res(3,3);
-        res.at(0,0) = -6;
-        res.at(1,0) = 1;
-        res.at(2,0) = 6;
-
-        res.at(0,1) = -8;
-        res.at(1,1) = 8;
-        res.at(2,1) = 6;
-
-        res.at(0,2) = -7;
-        res.at(1,2) = -1;
-        res.at(2,2) = 1;
-
+        Primitives::Matrix res({-6, 1, 6,
+                                -8, 8, 6,
+                                -7, -1, 1}, 3, 3);
         REQUIRE(l.sub_matrix(2,1) == res);
     }
-    Primitives::Matrix orig(3,3);
-
-    orig.at(0,0) = 3;
-    orig.at(1,0) = 5;
-    orig.at(2,0) = 0;
-
-    orig.at(0,1) = 2;
-    orig.at(1,1) = -1;
-    orig.at(2,1) = -7;
-
-    orig.at(0,2) = 6;
-    orig.at(1,2) = -1;
-    orig.at(2,2) = 5;
+    Primitives::Matrix orig({3, 5, 0,
+                             2, -1, -7,
+                             6, -1, 5}, 3, 3);
     SECTION("Minor"){
 
 
@@ -262,20 +153,18 @@ TEST_CASE("Matrix Determinants") {
         REQUIRE(orig.cofactor(1,0) == -25);
     }
     SECTION("Larger Determinants") {
-        float dat3[9] = {1, 2, 6,
-                         -5, 8, -4,
-                         2, 6, 4};
-        Primitives::Matrix m3(dat3,3,3);
+        Primitives::Matrix m3({1, 2, 6,
+                               -5, 8, -4,
+                               2, 6, 4}, 3, 3);
 
         REQUIRE(m3.cofactor(0,0) == 56);
         REQUIRE(m3.cofactor(0,1) == 12);
         REQUIRE(m3.cofactor(0,2) == -46);
         REQUIRE(Primitives::Matrix::determinant(m3) == -196);
-        float data[16] = {-2, -8, 3, 5,
-                          -3, 1, 7, 3,
-                          1 ,2, -9, 6,
-                          -6, 7, 7, -9};
-        Primitives::Matrix m4(data,4,4);
+        Primitives::Matrix m4({-2, -8, 3, 5,
+                               -3, 1, 7, 3,
+                               1, 2, -9, 6,
+                               -6, 7, 7, -9}, 4, 4);
         REQUIRE(m4.cofactor(0,0) == 690);
         REQUIRE(m4.cofactor(0,1) == 447);
         REQUIRE(m4.cofactor(0,2) == 210);
@@ -290,21 +179,21 @@ TEST_CASE("Matrix Inversion"){
         Primitives::Matrix m1({ 6, 4, 4, 4,
                                 5, 5, 7, 6,
                                 4, -9, 3, -7,
-                                9, 1, 7, -6}, 4, 4);
+                                9, 1, 7, -6 }, 4, 4);
         REQUIRE(m1.is_invertable());
 
         Primitives::Matrix m2({ -4, 2, -2, -3,
                                 9, 6, 2, 6,
                                 0, -5, 1, -5,
-                                0, 0, 0, 0}, 4, 4);
+                                0, 0, 0, 0 }, 4, 4);
         REQUIRE_FALSE(m2.is_invertable());
-    };
+    }
 
     SECTION("Invert Matrix Tests"){
-        Primitives::Matrix a({-5, 2, 6, -8,
+        Primitives::Matrix a({ -5, 2, 6, -8,
                               1, -5, 1, 8,
                               7, 7, -6, -7,
-                              1, -3, 7, 4}, 4, 4);
+                              1, -3, 7, 4 }, 4, 4);
         Primitives::Matrix b(a.invert());
         REQUIRE(Primitives::Matrix::determinant(a) == 532);
         REQUIRE(a.cofactor(2, 3) == -160);
@@ -316,7 +205,7 @@ TEST_CASE("Matrix Inversion"){
                                     -0.0789474, -0.223684, -0.0526316, 0.197368,
                                     -0.522556, -0.81391, -0.300752, 0.306391}, 4,4);
         REQUIRE(b == testMat);
-    };
+    }
 
     SECTION("Multiply by inverse matrices"){
         Primitives::Matrix _a({3, -9, 7, 3,
@@ -327,11 +216,56 @@ TEST_CASE("Matrix Inversion"){
                                3, -1, 7, 0,
                                7, 0, 5, 4,
                                6, -2, 0, 5}, 4, 4);
-
         Primitives::Matrix _c( _a*_b);
         Primitives::Matrix _inv(_b.invert());
-
         REQUIRE(_c *_inv == _a);
+    }
+}
+
+TEST_CASE("Scaling Matrices"){
+    SECTION("Scaling a point"){
+        auto transform = Primitives::Matrix::scale(2, 3, 4);
+        auto p = Primitives::point(-4, 6, 8);
+        REQUIRE(transform * p == Primitives::point(-8, 18, 32));
+    }
+    SECTION("Scaling a vector"){
+        auto transform = Primitives::Matrix::scale(2, 3, 4);
+        auto v = Primitives::vector(-4, 6, 8);
+        REQUIRE(transform * v == Primitives::vector(-8, 18, 32));
+    }
+    SECTION("Multiplying vector by inverse scaling matrix"){
+        auto transform = Primitives::Matrix::scale(2, 3, 4);
+        auto inv = transform.invert();
+        auto v = Primitives::vector(-4, 6, 8);
+        REQUIRE(inv * v == Primitives::vector(-2, 2, 2));
+    }
+}
+
+TEST_CASE("Rotation Matrices"){
+    SECTION("Rotating about the X axis"){
+        auto p = Primitives::point(0, 1, 0);
+        auto half_quarter = Primitives::Matrix::rotate_x(PI/4);
+        auto full_quarter = Primitives::Matrix::rotate_x(PI);
+        REQUIRE(half_quarter * p == Primitives::point(0, pow(2,.5)/2, pow(2,.5)/2));
+        REQUIRE(Primitives::point(0, -1, 0) == full_quarter * p);
+        REQUIRE(half_quarter.invert() * p == Primitives::point(0, pow(2,.5)/2, -pow(2,.5)/2));
+
+    }
+
+    SECTION("Rotating about the Y axis"){
+        auto p = Primitives::point(1, 0, 0);
+        auto half = Primitives::Matrix::rotate_y(PI);
+        auto half_quarter = Primitives::Matrix::rotate_y(-PI/4);
+        REQUIRE(half * p == Primitives::point(-1, 0, 0));
+        REQUIRE(half_quarter * p == Primitives::point(pow(2,.5)/2, 0, pow(2,.5)/2));
+    }
+
+    SECTION("Rotating about the Z axis"){
+       auto p = Primitives::point(0, 1, 0);
+       auto half_quarter = Primitives::Matrix::rotate_z(PI/4);
+       auto full_quarter = Primitives::Matrix::rotate_z(PI/2);
+       REQUIRE(half_quarter * p == Primitives::point(-pow(2, .5)/2, pow(2, .5)/2, 0));
+       REQUIRE(full_quarter * p == Primitives::point(-1, 0, 0));
     }
 }
 

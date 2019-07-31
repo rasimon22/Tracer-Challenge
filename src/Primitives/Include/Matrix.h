@@ -29,6 +29,9 @@ namespace Primitives {
         static Matrix identity_matrix();
         static Matrix translate(float, float, float);
         static Matrix scale(float, float, float);
+        static Matrix rotate_x(double);
+        static Matrix rotate_y(double);
+        static Matrix rotate_z(double);
         Matrix transpose();
         static float determinant(Matrix&);
         Matrix sub_matrix(size_t, size_t);
@@ -38,6 +41,7 @@ namespace Primitives {
         bool is_invertable();
         Matrix invert();
         Matrix& operator=(Matrix&&);
+
 
 
 

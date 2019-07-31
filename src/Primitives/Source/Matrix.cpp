@@ -5,6 +5,9 @@
 #include "../Include/Matrix.h"
 #include "../Include/Tuple.h"
 #include <cstring>
+#include <dimension_error.h>
+#include <iostream>
+#include <cmath>
 
 Primitives::Matrix::Matrix(): width(4), height(4), data(std::make_unique<float[]>(16)) {
     std::memset(data.get(), 0, sizeof(float) * width * height);
@@ -27,7 +30,7 @@ data(std::make_unique<float[]>(x * y)) {
 
 //TODO:Refactor initialization out of I-list into self assignment check
 Primitives::Matrix::Matrix(const Primitives::Matrix& rhs) {
-    if(rhs != *this) {
+    if(&rhs != this) {
         width = rhs.width;
         height = rhs.height;
         data = std::make_unique<float[]>(rhs.width * rhs.height);
@@ -53,8 +56,8 @@ data(std::move(rhs.data)){
 
 bool Primitives::Matrix::operator==(const Primitives::Matrix& rhs) const{
     if(height == rhs.height && width == rhs.width){
-        float* l_ptr = &data[0];
-        float* r_ptr = &rhs.data[0];
+        float* l_ptr = data.get();
+        float* r_ptr = rhs.data.get();
         for(size_t i = 0; i < width * height; ++i){
             if(!Primitives::float_equal(*l_ptr, * r_ptr)) return false;
             ++l_ptr;
@@ -71,7 +74,7 @@ bool Primitives::Matrix::operator!=(const Primitives::Matrix& rhs) const {
 
 Primitives::Matrix Primitives::Matrix::operator*(Primitives::Matrix &rhs){
     if(width != rhs.height){
-        throw "Mismatched Dimensions";
+        throw Primitives::Exceptions::DimensionError(*this, rhs, std::cerr);
     }
     Matrix m(height, rhs.width);
     for(size_t row = 0; row < m.height; ++row){
@@ -231,5 +234,32 @@ Primitives::Matrix Primitives::Matrix::scale(float x, float y, float z) {
     m.at(0,0) = x;
     m.at(1,1) = y;
     m.at(2,2) = z;
+    return m;
+}
+
+Primitives::Matrix Primitives::Matrix::rotate_x(double rad) {
+   auto m = Primitives::Matrix::identity_matrix();
+   m.at(1,1) = cos(rad);
+   m.at(2,1) = -sin(rad);
+   m.at(1,2) = sin(rad);
+   m.at(2,2) = cos(rad);
+   return m;
+}
+
+Primitives::Matrix Primitives::Matrix::rotate_y(double rad) {
+    auto m = Primitives::Matrix::identity_matrix();
+    m.at(0, 0) = cos(rad);
+    m.at(2,0) = sin(rad);
+    m.at(0,2) = -sin(rad);
+    m.at(2,2) = cos(rad);
+    return m;
+}
+
+Primitives::Matrix Primitives::Matrix::rotate_z(double rad) {
+    auto m = Primitives::Matrix::identity_matrix();
+    m.at(0,0) = cos(rad);
+    m.at(1,0) = -sin(rad);
+    m.at(0,1) = sin(rad);
+    m.at(1,1) = cos(rad);
     return m;
 }
