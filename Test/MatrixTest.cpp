@@ -287,4 +287,25 @@ TEST_CASE("Shearing Matrices") {
     }
 }
 
+TEST_CASE("Fluid API testing") {
+  SECTION("Fluid Translation") {
+      auto p = Primitives::point(0, 0, 0);
+      auto m = Primitives::Matrix::identity_matrix();
+      m.translate(1, 1, 1).translate(-1,-1,-1).translate(1, 1, 1);
+      REQUIRE(m * p == Primitives::point(1, 1, 1));
+  }
+  SECTION("Fluid Scaling") {
+      auto p = Primitives::point(-4, 6, 8);
+      auto m = Primitives::Matrix::identity_matrix();
+      m.scale(2, 3, 4).scale(-1, 1, 1);
+      REQUIRE(m * p == Primitives::point(8, 18, 32));
+  }
+  SECTION("Fluid rotation") {
+      auto p = Primitives::point(1, 0, 0);
+      auto m = Primitives::Matrix::identity_matrix();
+      m.rotate_z(PI/2).rotate_x(PI/2).rotate_y(PI/2);
+      REQUIRE(m * p == Primitives::point(1, 0, 0));
+  }
+}
+
 #endif

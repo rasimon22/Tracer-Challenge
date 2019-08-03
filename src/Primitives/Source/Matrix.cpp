@@ -293,3 +293,24 @@ Primitives::Matrix& Primitives::Matrix::rotate_x(double rad) {
     return *this;
 }
 
+Primitives::Matrix &Primitives::Matrix::rotate_y(double rad) {
+    auto m = Primitives::Matrix::rotate_y_matrix(rad);
+    *this = m * *this;
+    return *this;
+}
+
+Primitives::Matrix &Primitives::Matrix::rotate_z(double rad) {
+    auto m = Primitives::Matrix::rotate_z_matrix(rad);
+    *this = m * *this;
+    return *this;
+}
+
+Primitives::Matrix &Primitives::Matrix::shear(float xy, float xz, float yx, float yz, float zx, float zy) {
+    auto m = Primitives::Matrix::shear_matrix(xy, xz, yx, yz, zx, zy);
+    *this = m * *this;
+    return *this;
+}
+
+
+
+
