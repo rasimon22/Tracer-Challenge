@@ -1,17 +1,12 @@
-#define TEST 1
-
-#if TEST
-#define CATCH_CONFIG_MAIN
-
-#include "Test/catch.hpp"
-
-#else
 #include <iostream>
+#include <Matrix.h>
 #include "src/Simulation/Include/Environment.h"
 #include "src/Simulation/Include/Projectile.h"
 #include "src/Primitives/Include/Tuple.h"
 #include "src/Render/Include/Canvas.h"
 #include "src/Render/Include/Color.h"
+
+#define PI 3.141592634
 
 int main() {
     Simulation::Projectile proj(Primitives::point(0, 1, 0), Primitives::vector(5, 5, 0));
@@ -26,7 +21,19 @@ int main() {
             canv.at(static_cast<size_t>(proj.getPosition().x), 200 - static_cast<size_t>(proj.getPosition().y)) = red;
         }
     }
+
+    auto t = Primitives::point(0, 400, 0);
+    Primitives::Matrix transformation = Primitives::Matrix::identity_matrix();
+    Render::Canvas clock(2000, 2000);
+    Render::Color teal(50, 168, 135);
+    for(size_t i = 0; i < 200; ++i) {
+       transformation = Primitives::Matrix::identity_matrix();
+        transformation.rotate_z(i * PI/100 ).translate(1000, 1000, 0);
+       clock.at( static_cast<size_t>((transformation * t).x), static_cast<size_t>((transformation * t).y)) = teal;
+    }
+    clock.write("clock.ppm");
+
+
     canv.write("img.ppm");
     return 0;
 }
-#endif
