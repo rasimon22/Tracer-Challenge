@@ -15,13 +15,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12ded6ad-993c-4bd1-8c0c-ed9e6fcbd87e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Primitives/Include/dimension_error.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Primitives/Source/dimension_error.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/MatrixTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/MatrixTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/TransformationTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TransformationTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/catch.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test/catch.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Primitives/Include/Matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primitives/Include/Matrix.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Primitives/Source/Matrix.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primitives/Source/Matrix.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Primitives/Source/Tuple.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primitives/Source/Tuple.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,7 +43,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Primitives/Source/Tuple.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="662">
+                <state relative-caret-position="2877">
                   <caret line="137" column="11" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
                   <folding>
                     <element signature="e#47#65#0" expanded="true" />
@@ -53,11 +52,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Primitives/Source/Matrix.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1040">
-                  <caret line="263" column="12" selection-start-line="263" selection-start-column="12" selection-end-line="263" selection-end-column="12" />
+                <state relative-caret-position="914">
+                  <caret line="278" column="16" selection-start-line="278" selection-start-column="16" selection-end-line="278" selection-end-column="16" />
                   <folding>
                     <element signature="e#47#77#0" expanded="true" />
                   </folding>
@@ -77,11 +76,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Test/MatrixTest.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1092">
-                  <caret line="267" column="63" selection-start-line="267" selection-start-column="63" selection-end-line="267" selection-end-column="63" />
+                <state relative-caret-position="1026">
+                  <caret line="287" selection-start-line="287" selection-end-line="287" />
                   <folding>
                     <element signature="e#55#75#0" expanded="true" />
                   </folding>
@@ -93,7 +92,7 @@
             <entry file="file://$PROJECT_DIR$/src/Primitives/Include/Tuple.h">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1323">
-                  <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+                  <caret line="63" selection-start-line="63" selection-end-line="63" />
                 </state>
               </provider>
             </entry>
@@ -101,7 +100,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Test/TupleTest.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1773">
+                <state relative-caret-position="21">
                   <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
                 </state>
               </provider>
@@ -132,8 +131,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Primitives/Include/Matrix.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+                <state relative-caret-position="956">
+                  <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
                   <folding>
                     <element signature="e#116#133#0" expanded="true" />
                   </folding>
@@ -210,10 +209,10 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/Primitives/Include/dimension_error.h" />
         <option value="$PROJECT_DIR$/src/Primitives/Source/dimension_error.cpp" />
-        <option value="$PROJECT_DIR$/src/Primitives/Include/Matrix.h" />
-        <option value="$PROJECT_DIR$/src/Primitives/Source/Matrix.cpp" />
         <option value="$PROJECT_DIR$/src/Primitives/Source/Tuple.cpp" />
         <option value="$PROJECT_DIR$/Test/MatrixTest.cpp" />
+        <option value="$PROJECT_DIR$/src/Primitives/Include/Matrix.h" />
+        <option value="$PROJECT_DIR$/src/Primitives/Source/Matrix.cpp" />
       </list>
     </option>
   </component>
@@ -417,7 +416,8 @@
       <workItem from="1564363917728" duration="4715000" />
       <workItem from="1564446703336" duration="1233000" />
       <workItem from="1564453475458" duration="668000" />
-      <workItem from="1564536948723" duration="3117000" />
+      <workItem from="1564536948723" duration="3235000" />
+      <workItem from="1564794010817" duration="2155000" />
     </task>
     <task id="LOCAL-00001" summary="Added tuple magnitude calculation">
       <created>1545126574798</created>
@@ -524,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563664876409</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Rotation matrices added and tested">
+      <created>1564540319551</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1564540319551</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -560,17 +567,17 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123049000" />
+    <option name="totallyTimeSpent" value="125322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="25" y="5" width="2510" height="1387" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.75942785" visible="true" weight="0.17601626" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75942785" visible="true" weight="0.17764227" />
       <window_info id="Structure" order="1" sideWeight="0.50120485" side_tool="true" weight="0.29756796" />
       <window_info id="Favorites" order="2" sideWeight="0.24057217" side_tool="true" weight="0.32529628" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.32891566" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32858273" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33975902" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38762724" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32891566" />
@@ -608,7 +615,8 @@
     <MESSAGE value="4x4 cofactors passing, 3x3 determinants passing, higher order determinants failing" />
     <MESSAGE value="4x4 determinants passing; i am an idiot!" />
     <MESSAGE value="CMake Cleanup and some optimization for matrix copy constructor." />
-    <option name="LAST_COMMIT_MESSAGE" value="CMake Cleanup and some optimization for matrix copy constructor." />
+    <MESSAGE value="Rotation matrices added and tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rotation matrices added and tested" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -776,6 +784,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primitives/Source/Tuple.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2877">
+          <caret line="137" column="11" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
+          <folding>
+            <element signature="e#47#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Primitives/Include/dimension_error.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -783,6 +801,13 @@
           <folding>
             <element signature="e#127#147#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primitives/Include/Tuple.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
@@ -817,56 +842,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Test/TupleTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/MatrixTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="287" selection-start-line="287" selection-end-line="287" />
+          <folding>
+            <element signature="e#55#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Primitives/Include/Matrix.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        <state relative-caret-position="956">
+          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
           <folding>
             <element signature="e#116#133#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primitives/Include/Tuple.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/TupleTest.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1773">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primitives/Source/Tuple.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="137" column="11" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
-          <folding>
-            <element signature="e#47#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Primitives/Source/Matrix.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="263" column="12" selection-start-line="263" selection-start-column="12" selection-end-line="263" selection-end-column="12" />
+        <state relative-caret-position="914">
+          <caret line="278" column="16" selection-start-line="278" selection-start-column="16" selection-end-line="278" selection-end-column="16" />
           <folding>
             <element signature="e#47#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/MatrixTest.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="267" column="63" selection-start-line="267" selection-start-column="63" selection-end-line="267" selection-end-column="63" />
-          <folding>
-            <element signature="e#55#75#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -221,7 +221,7 @@ Primitives::Matrix &Primitives::Matrix::operator=(Primitives::Matrix &&rhs) {
     data = std::move(rhs.data);
 }
 
-Primitives::Matrix Primitives::Matrix::translate(float x, float y, float z) {
+Primitives::Matrix Primitives::Matrix::translation_matrix(float x, float y, float z) {
     auto m = Primitives::Matrix::identity_matrix();
     m.at(3,0) = x;
     m.at(3,1) = y;
@@ -229,7 +229,7 @@ Primitives::Matrix Primitives::Matrix::translate(float x, float y, float z) {
     return m;
 }
 
-Primitives::Matrix Primitives::Matrix::scale(float x, float y, float z) {
+Primitives::Matrix Primitives::Matrix::scale_matrix(float x, float y, float z) {
     auto m = Primitives::Matrix::identity_matrix();
     m.at(0,0) = x;
     m.at(1,1) = y;
@@ -237,7 +237,7 @@ Primitives::Matrix Primitives::Matrix::scale(float x, float y, float z) {
     return m;
 }
 
-Primitives::Matrix Primitives::Matrix::rotate_x(double rad) {
+Primitives::Matrix Primitives::Matrix::rotate_x_matrix(double rad) {
    auto m = Primitives::Matrix::identity_matrix();
    m.at(1,1) = cos(rad);
    m.at(2,1) = -sin(rad);
@@ -246,7 +246,7 @@ Primitives::Matrix Primitives::Matrix::rotate_x(double rad) {
    return m;
 }
 
-Primitives::Matrix Primitives::Matrix::rotate_y(double rad) {
+Primitives::Matrix Primitives::Matrix::rotate_y_matrix(double rad) {
     auto m = Primitives::Matrix::identity_matrix();
     m.at(0, 0) = cos(rad);
     m.at(2,0) = sin(rad);
@@ -255,7 +255,7 @@ Primitives::Matrix Primitives::Matrix::rotate_y(double rad) {
     return m;
 }
 
-Primitives::Matrix Primitives::Matrix::rotate_z(double rad) {
+Primitives::Matrix Primitives::Matrix::rotate_z_matrix(double rad) {
     auto m = Primitives::Matrix::identity_matrix();
     m.at(0,0) = cos(rad);
     m.at(1,0) = -sin(rad);
@@ -263,3 +263,29 @@ Primitives::Matrix Primitives::Matrix::rotate_z(double rad) {
     m.at(1,1) = cos(rad);
     return m;
 }
+
+Primitives::Matrix Primitives::Matrix::shear_matrix(float xy, float xz, float yx, float yz, float zx, float zy) {
+    auto m = Primitives::Matrix::identity_matrix();
+    m.at(1, 0) = xy;
+    m.at(2, 0) = xz;
+    m.at(0, 1) = yx;
+    m.at(2, 1) = yz;
+    m.at(0, 2) = zx;
+    m.at(1, 2) = zy;
+    return m;
+}
+Primitives::Matrix& Primitives::Matrix::translate(float x, float y, float z) {
+    auto m = Primitives::Matrix::translation_matrix(x, y ,z);
+    return m * *this;
+}
+
+Primitives::Matrix& Primitives::Matrix::scale(float x, float y, float z) {
+    auto m = Primitives::Matrix::scale_matrix(x, y, z);
+    return m * *this;
+}
+
+Primitives::Matrix& Primitives::Matrix::rotate_x(double rad) {
+    auto m = Primitives::Matrix::rotate_x_matrix(rad);
+    return m * *this;
+}
+

@@ -224,17 +224,17 @@ TEST_CASE("Matrix Inversion"){
 
 TEST_CASE("Scaling Matrices"){
     SECTION("Scaling a point"){
-        auto transform = Primitives::Matrix::scale(2, 3, 4);
+        auto transform = Primitives::Matrix::scale_matrix(2, 3, 4);
         auto p = Primitives::point(-4, 6, 8);
         REQUIRE(transform * p == Primitives::point(-8, 18, 32));
     }
     SECTION("Scaling a vector"){
-        auto transform = Primitives::Matrix::scale(2, 3, 4);
+        auto transform = Primitives::Matrix::scale_matrix(2, 3, 4);
         auto v = Primitives::vector(-4, 6, 8);
         REQUIRE(transform * v == Primitives::vector(-8, 18, 32));
     }
     SECTION("Multiplying vector by inverse scaling matrix"){
-        auto transform = Primitives::Matrix::scale(2, 3, 4);
+        auto transform = Primitives::Matrix::scale_matrix(2, 3, 4);
         auto inv = transform.invert();
         auto v = Primitives::vector(-4, 6, 8);
         REQUIRE(inv * v == Primitives::vector(-2, 2, 2));
@@ -244,8 +244,8 @@ TEST_CASE("Scaling Matrices"){
 TEST_CASE("Rotation Matrices"){
     SECTION("Rotating about the X axis"){
         auto p = Primitives::point(0, 1, 0);
-        auto half_quarter = Primitives::Matrix::rotate_x(PI/4);
-        auto full_quarter = Primitives::Matrix::rotate_x(PI);
+        auto half_quarter = Primitives::Matrix::rotate_x_matrix(PI / 4);
+        auto full_quarter = Primitives::Matrix::rotate_x_matrix(PI);
         REQUIRE(half_quarter * p == Primitives::point(0, pow(2,.5)/2, pow(2,.5)/2));
         REQUIRE(Primitives::point(0, -1, 0) == full_quarter * p);
         REQUIRE(half_quarter.invert() * p == Primitives::point(0, pow(2,.5)/2, -pow(2,.5)/2));
@@ -254,18 +254,36 @@ TEST_CASE("Rotation Matrices"){
 
     SECTION("Rotating about the Y axis"){
         auto p = Primitives::point(1, 0, 0);
-        auto half = Primitives::Matrix::rotate_y(PI);
-        auto half_quarter = Primitives::Matrix::rotate_y(-PI/4);
+        auto half = Primitives::Matrix::rotate_y_matrix(PI);
+        auto half_quarter = Primitives::Matrix::rotate_y_matrix(-PI / 4);
         REQUIRE(half * p == Primitives::point(-1, 0, 0));
         REQUIRE(half_quarter * p == Primitives::point(pow(2,.5)/2, 0, pow(2,.5)/2));
     }
 
     SECTION("Rotating about the Z axis"){
        auto p = Primitives::point(0, 1, 0);
-       auto half_quarter = Primitives::Matrix::rotate_z(PI/4);
-       auto full_quarter = Primitives::Matrix::rotate_z(PI/2);
+       auto half_quarter = Primitives::Matrix::rotate_z_matrix(PI / 4);
+       auto full_quarter = Primitives::Matrix::rotate_z_matrix(PI / 2);
        REQUIRE(half_quarter * p == Primitives::point(-pow(2, .5)/2, pow(2, .5)/2, 0));
        REQUIRE(full_quarter * p == Primitives::point(-1, 0, 0));
+    }
+}
+
+TEST_CASE("Shearing Matrices") {
+    SECTION("Test Shearing") {
+        auto t = Primitives::Matrix::shear_matrix(1, 0, 0, 0, 0, 0);
+        auto p = Primitives::point(2, 3, 4);
+        REQUIRE(t * p == Primitives::point(5, 3, 4));
+        t = Primitives::Matrix::shear_matrix(0, 1, 0, 0, 0, 0);
+        REQUIRE(t * p == Primitives::point(6, 3, 4));
+        t = Primitives::Matrix::shear_matrix(0, 0, 1, 0, 0, 0);
+        REQUIRE(t * p == Primitives::point(2, 5, 4));
+        t = Primitives::Matrix::shear_matrix(0, 0, 0, 1, 0, 0);
+        REQUIRE(t * p == Primitives::point(2, 7, 4));
+        t = Primitives::Matrix::shear_matrix(0, 0, 0, 0, 1, 0);
+        REQUIRE(t * p == Primitives::point(2, 3, 6));
+        t = Primitives::Matrix::shear_matrix(0, 0, 0, 0, 0, 1);
+        REQUIRE(t * p == Primitives::point(2, 3, 7));
     }
 }
 

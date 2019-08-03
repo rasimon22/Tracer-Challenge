@@ -7,7 +7,7 @@
 #include "../src/Primitives/Include/Tuple.h"
 
 TEST_CASE("Matrix Translation of A Tuple") {
-    auto m = Primitives::Matrix::translate(5, -3, 2);
+    auto m = Primitives::Matrix::translation_matrix(5, -3, 2);
     auto t = Primitives::point(-3 , 4, 5);
     auto result = Primitives::point(2, 1, 7);
     auto vec = Primitives::vector(-3, 4, 5);
@@ -24,7 +24,7 @@ TEST_CASE("Matrix Translation of A Tuple") {
 }
 
 TEST_CASE("Matrix Scaling of A Tuple") {
-    auto transform = Primitives::Matrix::scale(2, 3, 4);
+    auto transform = Primitives::Matrix::scale_matrix(2, 3, 4);
     auto p = Primitives::point(-4, 6, 8);
     auto v = Primitives::vector(p);
     auto res = Primitives::Tuple(-8, 18, 32, 1);

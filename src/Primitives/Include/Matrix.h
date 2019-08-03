@@ -27,11 +27,12 @@ namespace Primitives {
         Tuple operator*(Primitives::Tuple&);
         void print(std::ostream&);
         static Matrix identity_matrix();
-        static Matrix translate(float, float, float);
-        static Matrix scale(float, float, float);
-        static Matrix rotate_x(double);
-        static Matrix rotate_y(double);
-        static Matrix rotate_z(double);
+        static Matrix translation_matrix(float, float, float);
+        static Matrix scale_matrix(float, float, float);
+        static Matrix rotate_x_matrix(double);
+        static Matrix rotate_y_matrix(double);
+        static Matrix rotate_z_matrix(double);
+        static Matrix shear_matrix(float, float, float, float, float, float);
         Matrix transpose();
         static float determinant(Matrix&);
         Matrix sub_matrix(size_t, size_t);
@@ -41,8 +42,12 @@ namespace Primitives {
         bool is_invertable();
         Matrix invert();
         Matrix& operator=(Matrix&&);
-
-
+        Matrix& translate(float, float, float);
+        Matrix& scale(float, float, float);
+        Matrix& rotate_x(double);
+        Matrix& rotate_y(double);
+        Matrix& rotate_z(double);
+        Matrix& shear(float, float, float, float, float, float);
 
 
     private:
