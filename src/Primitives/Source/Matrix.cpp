@@ -219,6 +219,7 @@ Primitives::Matrix &Primitives::Matrix::operator=(Primitives::Matrix &&rhs) {
     width = std::move(rhs.width);
     height = std::move(rhs.height);
     data = std::move(rhs.data);
+    return *this;
 }
 
 Primitives::Matrix Primitives::Matrix::translation_matrix(float x, float y, float z) {
@@ -276,16 +277,19 @@ Primitives::Matrix Primitives::Matrix::shear_matrix(float xy, float xz, float yx
 }
 Primitives::Matrix& Primitives::Matrix::translate(float x, float y, float z) {
     auto m = Primitives::Matrix::translation_matrix(x, y ,z);
-    return m * *this;
+    *this = m * *this;
+    return *this;
 }
 
 Primitives::Matrix& Primitives::Matrix::scale(float x, float y, float z) {
     auto m = Primitives::Matrix::scale_matrix(x, y, z);
-    return m * *this;
+    *this = m * *this;
+    return *this;
 }
 
 Primitives::Matrix& Primitives::Matrix::rotate_x(double rad) {
     auto m = Primitives::Matrix::rotate_x_matrix(rad);
-    return m * *this;
+    *this = m * *this;
+    return *this;
 }
 
