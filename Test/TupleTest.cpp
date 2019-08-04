@@ -120,15 +120,14 @@ TEST_CASE("Magnitude Calculation")
     SECTION("Multi component magnitude")
     {
          Primitives::Tuple v = Primitives::vector(1.0f, 2.0f, 3.0f);
-         REQUIRE(abs(.01 * v.magnitude() > v.magnitude() - sqrt(14.0f)));
+         REQUIRE(.01 * v.magnitude() > v.magnitude() - sqrt(14.0f));
     }
 
     SECTION("Negative components")
     {
         Primitives::Tuple v = Primitives::vector(-1.0f, -2.0f, -3.0f);
-        REQUIRE(abs(.01 * v.magnitude() > v.magnitude() - sqrt(14.0f)));
+        REQUIRE(.01 * v.magnitude() > v.magnitude() - sqrt(14.0f));
     }
-
 }
 
 TEST_CASE("Normalizing Vectors")

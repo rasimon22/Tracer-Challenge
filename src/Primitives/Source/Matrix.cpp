@@ -310,7 +310,3 @@ Primitives::Matrix &Primitives::Matrix::shear(float xy, float xz, float yx, floa
     *this = m * *this;
     return *this;
 }
-
-
-
-

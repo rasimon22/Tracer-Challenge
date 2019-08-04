@@ -22,18 +22,17 @@ int main() {
         }
     }
 
-    auto t = Primitives::point(0, 400, 0);
+    auto t = Primitives::point(0, 500, 0);
     Primitives::Matrix transformation = Primitives::Matrix::identity_matrix();
     Render::Canvas clock(2000, 2000);
     Render::Color teal(50, 168, 135);
-    for(size_t i = 0; i < 200; ++i) {
+    for(size_t i = 0; i < 4000; ++i) {
        transformation = Primitives::Matrix::identity_matrix();
-        transformation.rotate_z(i * PI/100 ).translate(1000, 1000, 0);
+        transformation.rotate_z(i * PI/2000 ).translate(1000, 1000, 0);
        clock.at( static_cast<size_t>((transformation * t).x), static_cast<size_t>((transformation * t).y)) = teal;
     }
+
     clock.write("clock.ppm");
-
-
     canv.write("img.ppm");
     return 0;
 }
