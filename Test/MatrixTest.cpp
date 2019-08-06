@@ -2,9 +2,6 @@
 // Created by Rick Simon on 2019-01-15.
 //
 
-
-#if 1
-
 #include "catch.hpp"
 #include "../src/Primitives/Include/Tuple.h"
 #include "../src/Primitives/Include/Matrix.h"
@@ -308,4 +305,3 @@ TEST_CASE("Fluid API testing") {
   }
 }
 
-#endif
