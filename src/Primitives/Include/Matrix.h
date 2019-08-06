@@ -60,5 +60,4 @@ namespace Primitives {
 
 }
 
-
 #endif //TRACER_CHALLENGE_MATRIX_H

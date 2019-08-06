@@ -49,7 +49,7 @@ Primitives::Matrix::Matrix(std::vector<float> vec, size_t width, size_t height):
     }
 }
 
-Primitives::Matrix::Matrix(Primitives::Matrix &&rhs):width(std::move(rhs.width)), height(std::move(rhs.height)),
+Primitives::Matrix::Matrix(Primitives::Matrix &&rhs):width(rhs.width), height(rhs.height),
 data(std::move(rhs.data)){
 
 }
@@ -216,8 +216,8 @@ Primitives::Matrix Primitives::Matrix::invert() {
 }
 
 Primitives::Matrix &Primitives::Matrix::operator=(Primitives::Matrix &&rhs) {
-    width = std::move(rhs.width);
-    height = std::move(rhs.height);
+    width = rhs.width;
+    height = rhs.height;
     data = std::move(rhs.data);
     return *this;
 }
