@@ -8,15 +8,16 @@
 namespace Primitives {
     namespace Exceptions {
         Primitives::Exceptions::DimensionError::DimensionError(Primitives::Matrix &lhs, Primitives::Matrix &rhs,
-                std::ostream &stream): lhs(lhs), rhs(rhs), stream(stream) {
+                                                               std::ostream &stream) : lhs(lhs), rhs(rhs),
+                                                                                       stream(stream) {
 
         }
 
         void Primitives::Exceptions::DimensionError::what() {
-            stream << "Dimension Mismatch Error \n";
-            lhs.print(stream);
-            stream << "Does not match dimensions with \n";
-            rhs.print(stream);
+          stream << "Dimension Mismatch Error \n";
+          lhs.print(stream);
+          stream << "Does not match dimensions with \n";
+          rhs.print(stream);
         }
 
     }

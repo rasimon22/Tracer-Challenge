@@ -19,14 +19,13 @@ namespace Simulation {
 
         Projectile(Primitives::Tuple, Primitives::Tuple);
 
-        void changeMomentum(const Primitives::Tuple&);
+        void changeMomentum(const Primitives::Tuple &);
 
-        void setPosition(const Primitives::Tuple&);
+        void setPosition(const Primitives::Tuple &);
 
         Primitives::Tuple getPosition();
 
         Primitives::Tuple getMomentum();
-
 
 
     };

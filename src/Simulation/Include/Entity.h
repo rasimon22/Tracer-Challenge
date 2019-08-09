@@ -4,7 +4,9 @@
 
 #ifndef TRACER_CHALLENGE_ENTITY_H
 #define TRACER_CHALLENGE_ENTITY_H
+
 #include<Tuple.h>
+
 namespace Simulation {
     class Entity {
     protected:

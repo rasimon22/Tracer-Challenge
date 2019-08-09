@@ -4,18 +4,24 @@
 
 #ifndef TRACER_CHALLENGE_CANVAS_H
 #define TRACER_CHALLENGE_CANVAS_H
+
 #include <cstdlib>
 #include "Color.h"
 #include <memory>
 #include <string>
+
 namespace Render {
 
     class Canvas {
     public:
         Canvas(size_t, size_t);
-        void print(std::ostream&);
+
+        void print(std::ostream &);
+
         void write(std::string);
-        Color& at(size_t, size_t);
+
+        Color &at(size_t, size_t);
+
         Primitives::Tuple shape();
 
     private:

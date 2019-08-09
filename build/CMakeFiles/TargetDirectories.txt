@@ -1,4 +1,0 @@
-/Users/rasimon/Tracer-Challenge/build/CMakeFiles/ray_tracer_executable.dir
-/Users/rasimon/Tracer-Challenge/build/CMakeFiles/rebuild_cache.dir
-/Users/rasimon/Tracer-Challenge/build/CMakeFiles/edit_cache.dir
-/Users/rasimon/Tracer-Challenge/build/CMakeFiles/TESTS.dir

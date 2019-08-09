@@ -15,20 +15,22 @@ namespace Render {
 
         Color(float, float, float);
 
-        explicit Color(const Primitives::Tuple&);
+        explicit Color(const Primitives::Tuple &);
 
         float &red;
         float &green;
         float &blue;
 
-        bool operator ==(const Color&) const;
-        Color operator *(const Color&) const;
-        Color& operator=(const Color&);
+        bool operator==(const Color &) const;
 
+        Color operator*(const Color &) const;
+
+        Color &operator=(const Color &);
 
 
     };
-    std::ostream& operator<<(std::ostream&, const Color&);
+
+    std::ostream &operator<<(std::ostream &, const Color &);
 }
 
 

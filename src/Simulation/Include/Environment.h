@@ -26,15 +26,14 @@ namespace Simulation {
 
         Primitives::Tuple getWind();
 
-        void setGravity(const Primitives::Tuple&);
+        void setGravity(const Primitives::Tuple &);
 
-        void setWind(const Primitives::Tuple&);
-
-
+        void setWind(const Primitives::Tuple &);
 
 
     };
-    Simulation::Projectile tick(Simulation::Environment&, Simulation::Projectile&);
+
+    Simulation::Projectile tick(Simulation::Environment &, Simulation::Projectile &);
 }
 
 

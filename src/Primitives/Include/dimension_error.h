@@ -17,6 +17,7 @@ namespace Primitives {
             std::ostream &stream;
         public:
             DimensionError(Primitives::Matrix &, Primitives::Matrix &, std::ostream &);
+
             void what();
         };
     }
