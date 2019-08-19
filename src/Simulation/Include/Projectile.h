@@ -5,7 +5,7 @@
 #ifndef TRACER_CHALLENGE_PROJECTILE_H
 #define TRACER_CHALLENGE_PROJECTILE_H
 
-#include "../../Primitives/Include/Tuple.h"
+#include <Tuple.h>
 
 namespace Simulation {
     class Projectile {

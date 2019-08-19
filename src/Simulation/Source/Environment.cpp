@@ -2,8 +2,8 @@
 // Created by Rick Simon on 2018-12-18.
 //
 
-#include "../Include/Environment.h"
-#include "../Include/Projectile.h"
+#include <Environment.h>
+#include <Projectile.h>
 
 
 Primitives::Tuple Simulation::Environment::getGravity() {

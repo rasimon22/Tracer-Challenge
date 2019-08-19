@@ -1,11 +1,10 @@
 //
 // Created by Rick Simon on 2018-12-17.
 //
-#if 1
 
 #include "catch.hpp"
 #include <cmath>
-#include "../src/Primitives/Include/Tuple.h"
+#include <Tuple.h>
 
 
 TEST_CASE("A tuple with w=1.0 is a point") {
@@ -142,6 +141,4 @@ TEST_CASE("Cross Product") {
   REQUIRE(Primitives::cross_product(a, b) == Primitives::vector(-1.0f, 2.0f, -1.0f));
   REQUIRE(Primitives::cross_product(b, a) == Primitives::vector(1.0f, -2.0f, 1.0f));
 }
-
-#endif
 

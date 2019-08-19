@@ -3,13 +3,9 @@
 //
 
 #include "catch.hpp"
-#include "../src/Primitives/Include/Tuple.h"
-#include <../src/Render/Include/Ray.h>
-#include <../src/Simulation/Include/Sphere.h>
-#include <iostream>
-#include <vector>
-#include <exception>
-#include <cmath>
+#include <Tuple.h>
+#include <Ray.h>
+#include <Sphere.h>
 
 using Primitives::Tuple;
 using Primitives::point;
@@ -34,6 +30,39 @@ TEST_CASE("Ray construction") {
   }
 
   SECTION("Intersecting With Entities") {
-
+    auto e = Simulation::Sphere();
+    auto r = Render::Ray(point(0, 0, -5), vector(0, 0, 1));
+    r.cast(e);
+    REQUIRE(r._collision.coords.size() == 2);
+    REQUIRE(r._collision.coords[0] == 4.0);
+    REQUIRE(r._collision.coords[1] == 6.0);
+    REQUIRE(r._collision.obj == &e);
+    REQUIRE(r._collision.hit().coords[0] == 4.0);
+    r._collision.coords.clear();
+    r._collision.obj = nullptr;
+    r.origin() = point(0, 1, -5);
+    r.cast(e);
+    REQUIRE(r._collision.coords.size() == 2);
+    REQUIRE(r._collision.obj == &e);
+    r._collision.coords.clear();
+    r._collision.obj = nullptr;
+    r.origin() = point(0, 0, 0);
+    r.cast(e);
+    REQUIRE(r._collision.coords.size() == 2);
+    REQUIRE(r._collision.obj == &e);
+    REQUIRE(r._collision.hit().coords[0] == 1.0);
+    r._collision.coords.clear();
+    r._collision.obj = nullptr;
+    r.origin() = point(0, 0, 5);
+    r.cast(e);
+    REQUIRE(r._collision.coords.size() == 2);
+    REQUIRE(r._collision.obj == &e);
+    r._collision.coords.clear();
+    r._collision.obj = nullptr;
+    r.origin() = point(0, 2, -5);
+    r.cast(e);
+    REQUIRE(r._collision.coords.size() == 0);
+    REQUIRE(r._collision.hit().coords[0] == std::numeric_limits<float>::max());
+    REQUIRE(r._collision.obj == nullptr);
   }
 }

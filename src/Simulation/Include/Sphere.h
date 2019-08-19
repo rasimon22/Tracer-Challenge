@@ -5,10 +5,15 @@
 #ifndef TRACER_CHALLENGE_SPHERE_H
 #define TRACER_CHALLENGE_SPHERE_H
 
-#include "Entity.h"
+#include <Entity.h>
+#include <Tuple.h>
 
 namespace Simulation {
     class Sphere : public Simulation::Entity {
+    public:
+        Sphere();
+
+        void collide(Render::Ray &);
     };
 }
 

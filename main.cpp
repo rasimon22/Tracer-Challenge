@@ -15,7 +15,6 @@ int main() {
   Render::Color red(255.0, 0.0, 0.0);
   while (proj.getPosition().y > 0) {
     proj = Simulation::tick(env, proj);
-    //std::cout << proj.getPosition() << std::endl;
     if (proj.getPosition().y > 0 && proj.getPosition().x > 0) {
       canv.at(static_cast<size_t>(proj.getPosition().x), 200 - static_cast<size_t>(proj.getPosition().y)) = red;
     }

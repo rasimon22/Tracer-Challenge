@@ -2,12 +2,11 @@
 // Created by Rick Simon on 2018-12-28.
 //
 
-#if 1
 
 #include "catch.hpp"
 #include <cmath>
-#include "../src/Render/Include/Color.h"
-#include "../src/Render/Include/Canvas.h"
+#include <Color.h>
+#include <Canvas.h>
 #include <iostream>
 
 TEST_CASE("Colors are RGB tuples") {
@@ -61,4 +60,3 @@ TEST_CASE("Writing Pixel to Canvas") {
   REQUIRE(c1.at(2, 3) == Render::Color(255.0f, 255.0f, 100.0f));
 }
 
-#endif

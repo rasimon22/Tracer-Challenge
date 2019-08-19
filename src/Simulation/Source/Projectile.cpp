@@ -2,7 +2,7 @@
 // Created by Rick Simon on 2018-12-18.
 //
 
-#include "../Include/Projectile.h"
+#include <Projectile.h>
 
 Simulation::Projectile::Projectile() {
   this->position = Primitives::point(0.0f, 0.0f, 0.0f);

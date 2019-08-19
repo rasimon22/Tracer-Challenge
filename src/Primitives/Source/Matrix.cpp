@@ -28,7 +28,6 @@ Primitives::Matrix::Matrix(const float *in, size_t x, size_t y) : width(x), heig
   }
 }
 
-//TODO:Refactor initialization out of I-list into self assignment check
 Primitives::Matrix::Matrix(const Primitives::Matrix &rhs) {
   if (&rhs != this) {
     width = rhs.width;
@@ -43,7 +42,7 @@ Primitives::Matrix::Matrix(const Primitives::Matrix &rhs) {
 Primitives::Matrix::Matrix(std::vector<float> vec, size_t width, size_t height) : width(width), height(height),
                                                                                   data(std::make_unique<float[]>(
                                                                                           width * height)) {
-  float *ptr = &data[0];
+  float *ptr = data.get();
   for (auto f : vec) {
     *ptr = f;
     ++ptr;

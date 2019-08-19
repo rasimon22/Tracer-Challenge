@@ -5,7 +5,7 @@
 #ifndef TRACER_CHALLENGE_COLOR_H
 #define TRACER_CHALLENGE_COLOR_H
 
-#include "../../Primitives/Include/Tuple.h"
+#include "Tuple.h"
 
 namespace Render {
     class Color : public Primitives::Tuple {

@@ -5,8 +5,8 @@
 #ifndef TRACER_CHALLENGE_ENVIRONMENT_H
 #define TRACER_CHALLENGE_ENVIRONMENT_H
 
-#include "../../Primitives/Include/Tuple.h"
-#include "Projectile.h"
+#include <Tuple.h>
+#include <Projectile.h>
 #include <vector>
 
 namespace Simulation {

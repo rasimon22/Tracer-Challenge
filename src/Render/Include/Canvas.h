@@ -6,7 +6,7 @@
 #define TRACER_CHALLENGE_CANVAS_H
 
 #include <cstdlib>
-#include "Color.h"
+#include <Color.h>
 #include <memory>
 #include <string>
 

@@ -3,8 +3,8 @@
 //
 
 #include "catch.hpp"
-#include "../src/Primitives/Include/Tuple.h"
-#include "../src/Primitives/Include/Matrix.h"
+#include <Tuple.h>
+#include <Matrix.h>
 #include <iostream>
 #include <vector>
 #include <exception>
